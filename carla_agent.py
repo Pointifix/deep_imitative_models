@@ -153,7 +153,8 @@ def run_carla_client(cfg, server_log_fn):
     # Create and bundle the PID controllers.
     car_pid_controllers = pid_controller.CarPIDControllers.frompidconf(pidconf)
     lidar_params = preproc.LidarParams()
-        
+
+    model_config = yaml.safe_load(open("{}/.hydra/config.yaml".format(dimconf.model_path), 'r'))
     if mainconf.pilot == 'dim':
         sess = tfutil.create_session(allow_growth=True, per_process_gpu_memory_fraction=.2)
         log.info("Loading DIM.")
@@ -162,8 +163,7 @@ def run_carla_client(cfg, server_log_fn):
         else:
             # Create model+inference network.
             _, _, tensor_collections = tfutil.load_annotated_model(dimconf.model_path, sess, dimconf.checkpoint_path)
-            model = precog.interface.ESPInference(tensor_collections)        
-            model_config = yaml.safe_load(open("{}/.hydra/config.yaml".format(dimconf.model_path),'r'))
+            model = precog.interface.ESPInference(tensor_collections)
             del tensor_collections
         
         phi = model.phi

@@ -1,0 +1,6 @@
+- main.log_level=DEBUG
+- main.pilot=dim
+- dim.goal_likelihood=RegionIndicator
+- waypointer.interpolate=False
+- experiment.scene=Town01
+- experiment.n_vehicles=50

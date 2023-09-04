@@ -95,3 +95,4 @@ celerybeat-schedule
 
 # mypy
 .mypy_cache/
+/dim_release_results/

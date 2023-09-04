@@ -1,0 +1,7 @@
+- main.pilot=auto
+- data.save_data=True
+- experiment.scene=Town01
+- experiment.n_vehicles=50
+- plotting.plot=False
+- experiment.frames_per_episode=5000
+- experiment.n_episodes=1

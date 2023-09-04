@@ -174,7 +174,10 @@ class PlayerObservations:
         uapw_pack = np.reshape(self.unfilt_agent_positions_world, (-1, 3))
 
         # Store all agent current positions in agent frame.
-        self.unfilt_agent_positions_local = np.reshape(self.inv_tform_t.transform_points(uapw_pack), uoshape)
+        if self.n_missing == A - 1:
+            self.unfilt_agent_positions_local = np.reshape(uapw_pack, uoshape)
+        else:
+            self.unfilt_agent_positions_local = np.reshape(self.inv_tform_t.transform_points(uapw_pack), uoshape)
 
         if A == 1:
             self.agent_positions_local = np.array([])
@@ -305,7 +308,14 @@ class StreamingCARLALoader:
         # These are the past positions with the most recent one occuring at the current frame. 
         player_future_local = tform.transform_points(observations.player_positions_world)[1:self.T+1, :2][None, None]
         # TODO create for other agents too... assumes A=1.
-        # other_future_local = tform.transform_points(observations.agent_positions_world)
+
+        # Added by Simon Pointner, transforms and appends the other agents futures
+        for other_agent_future in observations.agent_positions_world:
+            agent_future_local = tform.transform_points(other_agent_future)[1:self.T + 1, :2][
+                None, None]
+
+            player_future_local = np.append(player_future_local, agent_future_local, axis=1)
+
         fd[S_future_world_frame] = player_future_local
         return fd
         
@@ -316,7 +326,7 @@ class StreamingCARLALoader:
                            observations,
                            frame,
                            with_bev=True,
-                           with_lights=True):
+                           with_lights=False):
         """Populates the feed_dict values of phi for the current frame.
 
         :param sensor_data: 
@@ -334,12 +344,13 @@ class StreamingCARLALoader:
             
         # Extract robot pasts.
         pasts = observations.player_positions_local[-self.T_past:, :2][None]
-        
+
         # Extract other agent pasts.
         pasts_other = observations.agent_positions_local[:, -self.T_past:, :2]
 
         # Indicate all present
-        agent_presence = np.ones(shape=tensoru.shape(phi.agent_presence), dtype=np.float32)
+        agent_presence = np.zeros(shape=tensoru.shape(phi.agent_presence), dtype=np.float32)
+        agent_presence[:, :(min((len(observations.nearby_agent_ids_flat) + 1), A))] = [1] * min((len(observations.nearby_agent_ids_flat) + 1), A)
 
         # Combine ego and other pasts.
         pasts_joint = np.concatenate((pasts, pasts_other))[:A][None]
@@ -349,7 +360,7 @@ class StreamingCARLALoader:
 
         yaws = np.tile(np.asarray(observations.yaws_local[:A])[None], (B, 1))
 
-        feed_dict[phi.S_past_world_frame] = pasts_batch                
+        feed_dict[phi.S_past_world_frame] = pasts_batch
         feed_dict[phi.yaws] = yaws
         feed_dict[phi.agent_presence] = agent_presence
         feed_dict[phi.is_training] = np.array(False)
@@ -417,7 +428,9 @@ def dict_to_json(dict_datum, out_fn, b=0):
     """
     assert(not os.path.isfile(out_fn))
     # Assume that the input dict has keys with .name attributes (e.g. tf.Tensors)
-    preproc_dict = {k.name.split(':')[0]: np.squeeze(v[b]) for k, v in dict_datum.items()}
+    filtered = {k: v for k, v in dict_datum.items() if k.dtype != bool}
+
+    preproc_dict = {k.name.split(':')[0]: np.squeeze(v[b]) for k, v in filtered.items()}
     with open(out_fn, 'w') as f:
         json.dump(preproc_dict, f, cls=NumpyEncoder)
     return out_fn

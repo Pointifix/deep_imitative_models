@@ -1,0 +1,225 @@
+data:
+  Hz: 10
+  TT: 60
+  add_steering_noise: 1
+  add_throttle_noise: 1
+  image_size:
+  - 800
+  - 450
+  measurement_buffer_length: 21
+  n_future_frames: 40
+  n_past_frames: 20
+  record_wait_frames: 50
+  save_data: false
+  save_depth: 0
+  save_frontal_rgb: 0
+  save_lidar: 0
+  save_period_frames: 10
+  save_semantic: 0
+  shapes:
+    A: 1
+    B: 1
+    C: 4
+    D: 2
+    H: 100
+    T: 20
+    T_past: 3
+    W: 100
+  use_lidar: true
+dim:
+  angle_setpoint_index: 7
+  batched_gaussian_mixture:
+    goal_likelihood_scale: 0.2
+    waypoint_count: 15
+    weight_scheme: uniform
+  check_gradients: true
+  checkpoint_path: None
+  goal_likelihood: RegionIndicator
+  initialize_rounds: 1
+  initialize_some_stationary_z: false
+  max_planning_steps: 10
+  max_top_k: 4
+  min_planning_steps: 9
+  model_path: ${env:DIMROOT}/../data/esp_train_results/2023-06/06-19-19-45-09_carla_town01_A1_T20_v2_precog.bijection.social_convrnn.SocialConvRNN_/
+  old_version: false
+  planning_lr: 0.003
+  position_setpoint_index: 7
+  region_clip_K: 20
+  replan_period: 8
+experiment:
+  allow_vehicles_to_hit_us_from_behind: false
+  frames_per_episode: 5000
+  goal_distance_threshold: 20
+  min_takeover_frames: 50
+  n_episodes: 25
+  n_episodes_run: 0
+  n_pedestrians: 0
+  n_vehicles: 50
+  record_google_sheets: true
+  rstr: ''
+  scene: Town01
+  seed: 48
+  skip_to: 0
+  specific_episodes: []
+main:
+  debug_post_load: false
+  log_level: DEBUG
+  override_pilot: false
+  pilot: dim
+  save_dim_feeds: false
+pid:
+  brake_bias: 0.0
+  form_brake: full
+  form_steer: full
+  form_throttle: full
+  kd_brake: 0.0
+  kd_steer: 0.0
+  kd_throttle: 0.0
+  ki_brake: 0.0
+  ki_steer: 0.0
+  ki_throttle: 0.0
+  kp_brake: 1.0
+  kp_steer: 0.8
+  kp_throttle: 0.2
+  steer_bias: 0.0
+  throttle_bias: 0.0
+plotting:
+  chosen:
+    alpha: 0.8
+    linewidth: 0
+    marker: +
+    zorder: 500
+  colors: []
+  control_waypoints:
+    alpha: 0.2
+    color: blue
+    linewidth: 0
+    marker: s
+    markersize: 7
+  cw_colors: []
+  destination:
+    alpha: 1.0
+    color: gold
+    marker: '*'
+  dpi: 96
+  expert_color: ''
+  generator:
+    alpha: 0.2
+    color: ''
+    markeredgecolor: none
+    markersize: 10
+  generator_color: ''
+  hires_dim_font_size: 6
+  hires_plot: 0
+  imgfmt: jpg
+  legend_font_size: 5
+  lores_dim_font_size: 3
+  mixture_waypoints:
+    alpha: 0.4
+    color: '#ff7f00'
+    linewidth: 0
+    marker: D
+    markersize: 7
+  past:
+    alpha: 0.5
+    linewidth: 0
+    marker: x
+  past_alpha: 0.0
+  past_color: ''
+  plan:
+    alpha: 0.8
+    color: skyblue
+    markeredgecolor: k
+    markeredgewidth: 1
+    markersize: 10
+    zorder: 20
+  plot: 1
+  plot_chosen_waypoint: false
+  plot_legend: false
+  plot_overhead_im: true
+  plot_text_block: true
+  plot_zoomed: true
+  polygon:
+    alpha: 0.4
+    color: '#ff7f00'
+  polygon_seed:
+    alpha: 0.5
+    linewidth: 1
+    marker: D
+    markersize: 3
+  region_vertices:
+    alpha: 0.2
+    color: blue
+    linewidth: 1
+    marker: s
+    markersize: 7
+  remove_second_row: 1
+  route:
+    alpha: 0.2
+    color: black
+  save_plots: 1
+  segment_set:
+    alpha: 0.4
+    linewidth: 2
+    marker: D
+    markersize: 7
+  waypoint:
+    alpha: 0.8
+    color: green
+    linewidth: 1
+    marker: x
+    markersize: 5
+    zorder: 50
+  zoom_bounds:
+  - 0
+  - 100
+  - 100
+  - 0
+  zoom_out_bounds:
+  - -100
+  - 200
+  - 200
+  - -100
+server:
+  carla_dir: ${env:PYCARLA}/../
+  client_timeout: 1000
+  host: localhost
+  port: 2000
+  quality_level: Low
+  server_log_dir: ./
+trackers:
+  reset_trackers_on_red: true
+  stationary_threshold: 4
+  stationary_window_size: 600
+  stuck_ignore_reds: 0
+  stuck_window_size: 275
+  turn_tracker_frames: 25
+  turn_tracker_thresh: 25
+  x_thresh_block: 8.5
+  y_thresh_block: 2.25
+waypointer:
+  control_meters_per_waypoint: 1
+  divergence_distance: 20
+  drop_far_on_red: false
+  drop_near_on_green: false
+  drop_near_on_turn: false
+  drop_near_on_yellow: false
+  ensure_one_stationary: 1
+  extra_route_node: false
+  have_planned: false
+  interp_points_per_pair: 3
+  interpolate: false
+  lane_fudge_factor: -0.15
+  max_red_distance: 5
+  max_waypoint_distance: 10000
+  min_green_distance: 2
+  min_waypoint_distance: 0
+  n_waypoints: 20
+  region_control: false
+  region_d: 1.0
+  reset_route_upon_divergence: true
+  stationary_window_size: 600
+  stuck_ignore_reds: 0
+  stuck_waypoint_distance: 6.0
+  stuck_window_size: 275
+  turn_waypoint_distance: 5.0

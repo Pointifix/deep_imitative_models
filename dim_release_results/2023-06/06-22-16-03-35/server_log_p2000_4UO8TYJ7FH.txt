@@ -1,0 +1,1739 @@
+Disabling core dumps.
+LogPlatformFile: Using cached read wrapper
+LogInit: Display: RandInit(0) SRandInit(0).
+LogTaskGraph: Started task graph with 5 named threads and 17 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.041282
+LogPluginManager: Mounting plugin Carla
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin PerformanceMonitor
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ImmediatePhysics
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+[33mLogFileManager: Warning: ReadFile failed: Count=0 Length=4096 Error=errno=21 (Is a directory) for file 
+[0mLogInit: Using libcurl 7.48.0-DEV
+LogInit:  - built for x86_64-unknown-linux-gnu
+LogInit:  - supports SSL with OpenSSL/1.0.2h
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_TLSAUTH_SRP
+LogInit:  Libcurl: checking if '/etc/pki/tls/certs/ca-bundle.crt' exists
+LogInit:  Libcurl: checking if '/etc/ssl/certs/ca-certificates.crt' exists
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = /etc/ssl/certs/ca-certificates.crt  - Libcurl will set CURLOPT_CAINFO to it
+LogInit: Build: ++UE4+Release-4.18-CL-0
+LogInit: Engine Version: 4.18.3-0+++UE4+Release-4.18
+LogInit: Compatible Engine Version: 4.18.0-0+++UE4+Release-4.18
+LogInit: Net CL: 0
+LogDevObjectVersion: Number of dev versions registered: 16
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 20
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 30
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 20
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 4
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 1
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 12
+LogInit: Compiled (64-bit): Jun 18 2018 15:03:39
+LogInit: Compiled with Clang: 3.9.1 (tags/RELEASE_391/rc2)
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.18
+LogInit: Command line:  /Game/Maps/Town01 -carla-settings="../Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini" -carla-server -benchmark -fps=10 -windowed -ResX=500 -ResY=500 -nocore
+LogInit: Base directory: /home/simon/CARLA/CarlaUE4/Binaries/Linux/
+LogInit: Installed Engine Build: 0
+LogInit: Presizing for max 2097152 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogStreaming: Display: Async Loading initialized: Event Driven Loader: true, Async Loading Thread: false
+LogInit: Object subsystem initialized
+[2023.06.22-14.03.36:585][  0]LogInit: Initializing SDL.
+[2023.06.22-14.03.36:939][  0]LogInit: Using SDL_WINDOW_OPENGL
+[2023.06.22-14.03.36:939][  0]LogInit: Initialized SDL 2.0.5 revision: 11184 (hg-11184:04063928c4a8 with EpicExtensions) (compiled against 2.0.5)
+[2023.06.22-14.03.36:939][  0]LogInit: Display metrics:
+[2023.06.22-14.03.36:939][  0]LogInit:   PrimaryDisplayWidth: 1920
+[2023.06.22-14.03.36:939][  0]LogInit:   PrimaryDisplayHeight: 1080
+[2023.06.22-14.03.36:939][  0]LogInit:   PrimaryDisplayWorkAreaRect:
+[2023.06.22-14.03.36:939][  0]LogInit:     Left=0, Top=27, Right=1920, Bottom=978
+[2023.06.22-14.03.36:939][  0]LogInit:   VirtualDisplayRect:
+[2023.06.22-14.03.36:939][  0]LogInit:     Left=0, Top=0, Right=5120, Bottom=1080
+[2023.06.22-14.03.36:939][  0]LogInit:   TitleSafePaddingSize: X=0.000 Y=0.000
+[2023.06.22-14.03.36:939][  0]LogInit:   ActionSafePaddingSize: X=0.000 Y=0.000
+[2023.06.22-14.03.36:939][  0]LogInit:   Number of monitors: 3
+[2023.06.22-14.03.36:939][  0]LogInit:     Monitor 0
+[2023.06.22-14.03.36:939][  0]LogInit:       Name: 24MB35 23"
+[2023.06.22-14.03.36:939][  0]LogInit:       ID: display0
+[2023.06.22-14.03.36:939][  0]LogInit:       NativeWidth: 1920
+[2023.06.22-14.03.36:939][  0]LogInit:       NativeHeight: 1080
+[2023.06.22-14.03.36:939][  0]LogInit:       bIsPrimary: true
+[2023.06.22-14.03.36:939][  0]LogInit:     Monitor 1
+[2023.06.22-14.03.36:939][  0]LogInit:       Name: LG ULTRAGEAR 24"
+[2023.06.22-14.03.36:939][  0]LogInit:       ID: display1
+[2023.06.22-14.03.36:939][  0]LogInit:       NativeWidth: 1920
+[2023.06.22-14.03.36:939][  0]LogInit:       NativeHeight: 1080
+[2023.06.22-14.03.36:939][  0]LogInit:       bIsPrimary: false
+[2023.06.22-14.03.36:939][  0]LogInit:     Monitor 2
+[2023.06.22-14.03.36:939][  0]LogInit:       Name: 19MB35 19"
+[2023.06.22-14.03.36:939][  0]LogInit:       ID: display2
+[2023.06.22-14.03.36:939][  0]LogInit:       NativeWidth: 1280
+[2023.06.22-14.03.36:939][  0]LogInit:       NativeHeight: 1024
+[2023.06.22-14.03.36:939][  0]LogInit:       bIsPrimary: false
+[2023.06.22-14.03.36:940][  0]LogLinux: Selected Device Profile: [LinuxNoEditor]
+[2023.06.22-14.03.36:940][  0]LogInit: Applying CVar settings loaded from the selected device profile: [LinuxNoEditor]
+[2023.06.22-14.03.36:945][  0]LogInit: Linux hardware info:
+[2023.06.22-14.03.36:945][  0]LogInit:  - we are not the first instance of this executable
+[2023.06.22-14.03.36:945][  0]LogInit:  - this process' id (pid) is 24170, parent process' id (ppid) is 24163
+[2023.06.22-14.03.36:945][  0]LogInit:  - we are not running under debugger
+[2023.06.22-14.03.36:945][  0]LogInit:  - machine network name is 'simon'
+[2023.06.22-14.03.36:945][  0]LogInit:  - user name is 'simon' (simon)
+[2023.06.22-14.03.36:945][  0]LogInit:  - we're logged in locally
+[2023.06.22-14.03.36:945][  0]LogInit:  - we're running with rendering
+[2023.06.22-14.03.36:945][  0]LogInit:  - CPU: GenuineIntel 'Intel(R) Core(TM) i5-9600KF CPU @ 3.70GHz' (signature: 0x906ED)
+[2023.06.22-14.03.36:945][  0]LogInit:  - Number of physical cores available for the process: 6
+[2023.06.22-14.03.36:945][  0]LogInit:  - Number of logical cores available for the process: 6
+[2023.06.22-14.03.36:945][  0]LogInit:  - Cache line size: 64
+[2023.06.22-14.03.36:945][  0]LogInit:  - Memory allocator used: binned2
+[2023.06.22-14.03.36:945][  0]LogLinux: Benchmarking clocks:
+[2023.06.22-14.03.36:945][  0]LogLinux:  - CLOCK_REALTIME (id=0) can sustain 64241563 (64242K, 64M) calls per second without zero deltas.
+[2023.06.22-14.03.36:945][  0]LogLinux:  - CLOCK_MONOTONIC (id=1) can sustain 63964664 (63965K, 64M) calls per second without zero deltas.
+[2023.06.22-14.03.36:945][  0]LogLinux:  - CLOCK_MONOTONIC_RAW (id=4) can sustain 64771830 (64772K, 65M) calls per second without zero deltas.
+[2023.06.22-14.03.36:945][  0]LogLinux:  - CLOCK_MONOTONIC_COARSE (id=6) can sustain 185397958 (185398K, 185M) calls per second with 99.999860% zero deltas.
+[2023.06.22-14.03.36:945][  0]LogLinux: Selected clock_id 4 (CLOCK_MONOTONIC_RAW) since it is the fastest support clock without zero deltas.
+[2023.06.22-14.03.36:945][  0]LogInit: Linux-specific commandline switches:
+[2023.06.22-14.03.36:945][  0]LogInit:  -nodwarf (currently OFF): suppress parsing of DWARF debug info (callstacks will be generated faster, but won't have line numbers)
+[2023.06.22-14.03.36:945][  0]LogInit:  -ansimalloc - use malloc()/free() from libc (useful for tools like valgrind and electric fence)
+[2023.06.22-14.03.36:945][  0]LogInit:  -jemalloc - use jemalloc for all memory allocation
+[2023.06.22-14.03.36:945][  0]LogInit:  -binnedmalloc - use binned malloc  for all memory allocation
+[2023.06.22-14.03.36:945][  0]LogInit:  -httpproxy=ADDRESS:PORT - redirects HTTP requests to a proxy (only supported if compiled with libcurl)
+[2023.06.22-14.03.36:945][  0]LogInit:  -reuseconn - allow libcurl to reuse HTTP connections (only matters if compiled with libcurl)
+[2023.06.22-14.03.36:945][  0]LogInit:  -virtmemkb=NUMBER - sets process virtual memory (address space) limit (overrides VirtualMemoryLimitInKB value from .ini)
+[2023.06.22-14.03.36:945][  0]LogInit:  - Physical RAM available (not considering process quota): 32 GB (32012 MB, 32781012 KB, 33567756288 bytes)
+[2023.06.22-14.03.36:946][  0]LogInit: Using OS detected language (en-US).
+[2023.06.22-14.03.36:946][  0]LogInit: Using OS detected locale (en-US).
+[2023.06.22-14.03.36:947][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2023.06.22-14.03.37:376][  0]LogRHI: Initializing OpenGL RHI
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_VENDOR: NVIDIA Corporation
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_RENDERER: NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_VERSION: 4.3.0 NVIDIA 530.41.03
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_SHADING_LANGUAGE_VERSION: 4.30 NVIDIA via Cg compiler
+[2023.06.22-14.03.37:376][  0]LogRHI: OpenGL Extensions:
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_AMD_multi_draw_indirect
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_AMD_seamless_cubemap_per_texture
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_AMD_vertex_shader_viewport_index
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_AMD_vertex_shader_layer
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_arrays_of_arrays
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_base_instance
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_bindless_texture
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_blend_func_extended
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_buffer_storage
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_clear_buffer_object
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_clear_texture
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_clip_control
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_color_buffer_float
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_compressed_texture_pixel_storage
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_conservative_depth
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_compute_shader
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_compute_variable_group_size
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_conditional_render_inverted
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_copy_buffer
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_copy_image
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_cull_distance
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_debug_output
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_depth_buffer_float
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_depth_clamp
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_depth_texture
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_derivative_control
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_direct_state_access
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_draw_buffers
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_draw_buffers_blend
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_draw_indirect
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_draw_elements_base_vertex
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_draw_instanced
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_enhanced_layouts
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_ES2_compatibility
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_ES3_compatibility
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_ES3_1_compatibility
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_ES3_2_compatibility
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_explicit_attrib_location
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_explicit_uniform_location
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_fragment_coord_conventions
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_fragment_layer_viewport
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_fragment_program
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_fragment_program_shadow
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_fragment_shader
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_fragment_shader_interlock
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_framebuffer_no_attachments
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_framebuffer_object
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_framebuffer_sRGB
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_geometry_shader4
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_get_program_binary
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_get_texture_sub_image
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_gl_spirv
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_gpu_shader5
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_gpu_shader_fp64
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_gpu_shader_int64
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_half_float_pixel
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_half_float_vertex
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_imaging
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_indirect_parameters
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_instanced_arrays
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_internalformat_query
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_internalformat_query2
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_invalidate_subdata
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_map_buffer_alignment
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_map_buffer_range
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_multi_bind
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_multi_draw_indirect
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_multisample
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_multitexture
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_occlusion_query
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_occlusion_query2
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_parallel_shader_compile
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_pipeline_statistics_query
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_pixel_buffer_object
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_point_parameters
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_point_sprite
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_polygon_offset_clamp
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_post_depth_coverage
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_program_interface_query
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_provoking_vertex
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_query_buffer_object
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_robust_buffer_access_behavior
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_robustness
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_sample_locations
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_sample_shading
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_sampler_objects
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_seamless_cube_map
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_seamless_cubemap_per_texture
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_separate_shader_objects
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_atomic_counter_ops
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_atomic_counters
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_ballot
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_bit_encoding
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_clock
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_draw_parameters
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_group_vote
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_image_load_store
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_image_size
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_objects
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_precision
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_storage_buffer_object
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_subroutine
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_texture_image_samples
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_texture_lod
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shading_language_100
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shader_viewport_layer_array
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shading_language_420pack
+[2023.06.22-14.03.37:376][  0]LogRHI:   GL_ARB_shading_language_include
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_shading_language_packing
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_shadow
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_sparse_buffer
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_sparse_texture
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_sparse_texture2
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_sparse_texture_clamp
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_spirv_extensions
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_stencil_texturing
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_sync
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_tessellation_shader
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_barrier
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_border_clamp
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_buffer_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_buffer_object_rgb32
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_buffer_range
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_compression
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_compression_bptc
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_compression_rgtc
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_cube_map
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_cube_map_array
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_env_add
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_env_combine
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_env_crossbar
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_env_dot3
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_filter_anisotropic
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_filter_minmax
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_float
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_gather
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_mirror_clamp_to_edge
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_mirrored_repeat
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_multisample
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_non_power_of_two
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_query_levels
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_query_lod
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_rectangle
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_rg
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_rgb10_a2ui
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_stencil8
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_storage
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_storage_multisample
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_swizzle
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_texture_view
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_timer_query
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_transform_feedback2
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_transform_feedback3
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_transform_feedback_instanced
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_transform_feedback_overflow_query
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_transpose_matrix
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_uniform_buffer_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_array_bgra
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_array_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_attrib_64bit
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_attrib_binding
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_buffer_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_program
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_shader
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_type_10f_11f_11f_rev
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_vertex_type_2_10_10_10_rev
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_viewport_array
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ARB_window_pos
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ATI_draw_buffers
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ATI_texture_float
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_ATI_texture_mirror_once
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_S3_s3tc
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_env_add
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_abgr
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_bgra
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_bindable_uniform
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_blend_color
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_blend_equation_separate
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_blend_func_separate
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_blend_minmax
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_blend_subtract
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_compiled_vertex_array
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_Cg_shader
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_depth_bounds_test
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_direct_state_access
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_draw_buffers2
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_draw_instanced
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_draw_range_elements
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_fog_coord
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_framebuffer_blit
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_framebuffer_multisample
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXTX_framebuffer_mixed_formats
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_framebuffer_multisample_blit_scaled
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_framebuffer_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_framebuffer_sRGB
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_geometry_shader4
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_gpu_program_parameters
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_gpu_shader4
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_multi_draw_arrays
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_multiview_texture_multisample
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_multiview_timer_query
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_packed_depth_stencil
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_packed_float
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_packed_pixels
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_pixel_buffer_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_point_parameters
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_polygon_offset_clamp
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_post_depth_coverage
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_provoking_vertex
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_raster_multisample
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_rescale_normal
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_secondary_color
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_separate_shader_objects
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_separate_specular_color
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_shader_image_load_formatted
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_shader_image_load_store
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_shader_integer_mix
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_shadow_funcs
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_sparse_texture2
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_stencil_two_side
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_stencil_wrap
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture3D
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_array
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_buffer_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_compression_dxt1
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_compression_latc
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_compression_rgtc
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_compression_s3tc
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_cube_map
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_edge_clamp
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_env_combine
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_env_dot3
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_filter_anisotropic
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_filter_minmax
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_integer
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_lod
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_lod_bias
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_mirror_clamp
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_shadow_lod
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_shared_exponent
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_sRGB
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_sRGB_R8
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_sRGB_decode
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_storage
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_texture_swizzle
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_timer_query
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_transform_feedback2
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_vertex_array
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_vertex_array_bgra
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_vertex_attrib_64bit
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_window_rectangles
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_x11_sync_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_import_sync_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_robustness_video_memory_purge
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_IBM_rasterpos_clip
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_IBM_texture_mirrored_repeat
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KHR_context_flush_control
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KHR_debug
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_memory_object
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_memory_object_fd
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_memory_object_sparse
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KHR_parallel_shader_compile
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KHR_no_error
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KHR_robust_buffer_access_behavior
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KHR_robustness
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_semaphore
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_EXT_semaphore_fd
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_timeline_semaphore
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KHR_shader_subgroup
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_KTX_buffer_region
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_alpha_to_coverage_dither_control
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_bindless_multi_draw_indirect
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_bindless_multi_draw_indirect_count
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_bindless_texture
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_blend_equation_advanced
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_blend_equation_advanced_coherent
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NVX_blend_equation_advanced_multi_draw_buffers
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_blend_minmax_factor
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_blend_square
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_clip_space_w_scaling
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_command_list
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_compute_program5
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_conditional_render
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_conservative_raster
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_conservative_raster_dilate
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_conservative_raster_pre_snap_triangles
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_copy_depth_to_color
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_copy_image
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_depth_buffer_float
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_depth_clamp
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_draw_texture
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_draw_vulkan_image
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_ES1_1_compatibility
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_ES3_1_compatibility
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_explicit_multisample
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_feature_query
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fence
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fill_rectangle
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_float_buffer
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fog_distance
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fragment_coverage_to_color
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fragment_program
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fragment_program_option
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fragment_program2
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_fragment_shader_interlock
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_framebuffer_mixed_samples
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_framebuffer_multisample_coverage
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_geometry_shader4
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_geometry_shader_passthrough
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_gpu_program4
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_internalformat_sample_query
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_gpu_program4_1
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_gpu_program5
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_gpu_program5_mem_extended
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_gpu_program_fp64
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_gpu_shader5
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_half_float
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_light_max_exponent
+[2023.06.22-14.03.37:377][  0]LogRHI:   GL_NV_memory_attachment
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_multisample_coverage
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_multisample_filter_hint
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_occlusion_query
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_packed_depth_stencil
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_parameter_buffer_object
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_parameter_buffer_object2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_path_rendering
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_path_rendering_shared_edge
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_pixel_data_range
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_point_sprite
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_primitive_restart
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_query_resource
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_query_resource_tag
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_register_combiners
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_register_combiners2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_sample_locations
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_sample_mask_override_coverage
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_atomic_counters
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_atomic_float
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_atomic_float64
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_atomic_fp16_vector
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_atomic_int64
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_buffer_load
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_storage_buffer_object
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_subgroup_partitioned
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_stereo_view_rendering
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texgen_reflection
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_barrier
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_compression_vtc
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_env_combine4
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_multisample
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_rectangle
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_rectangle_compressed
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_shader
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_shader2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_texture_shader3
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_transform_feedback
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_transform_feedback2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_uniform_buffer_unified_memory
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_uniform_buffer_std430_layout
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vdpau_interop
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vdpau_interop2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_array_range
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_array_range2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_attrib_integer_64bit
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_buffer_unified_memory
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_program
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_program1_1
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_program2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_program2_option
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_vertex_program3
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_viewport_array2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_viewport_swizzle
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NVX_conditional_render
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_gpu_multicast
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NVX_progress_fence
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NVX_gpu_memory_info
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NVX_nvenc_interop
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_thread_group
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_NV_shader_thread_shuffle
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_KHR_blend_equation_advanced
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_KHR_blend_equation_advanced_coherent
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_OVR_multiview
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_OVR_multiview2
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_SGIS_generate_mipmap
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_SGIS_texture_lod
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_SGIX_depth_texture
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_SGIX_shadow
+[2023.06.22-14.03.37:378][  0]LogRHI:   GL_SUN_slice_accum
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_TEXTURE_SIZE: 32768
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_CUBE_MAP_TEXTURE_SIZE: 32768
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_ARRAY_TEXTURE_LAYERS: 2048
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_3D_TEXTURE_SIZE: 16384
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_RENDERBUFFER_SIZE: 32768
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_DRAW_BUFFERS: 8
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_COLOR_ATTACHMENTS: 8
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_SAMPLES: 32
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_COLOR_TEXTURE_SAMPLES: 32
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_DEPTH_TEXTURE_SAMPLES: 32
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_INTEGER_SAMPLES: 32
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS: 192
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_VERTEX_ATTRIBS: 16
+[2023.06.22-14.03.37:379][  0]LogRHI:   GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
+[2023.06.22-14.03.37:379][  0]LogRHI: OpenGL MajorVersion = 4, MinorVersion = 3, ShaderPlatform = GLSL_430, FeatureLevel = SM5
+[2023.06.22-14.03.37:388][  0]LogRHI: Texture pool is 4300 MB (70% of 6144 MB)
+[2023.06.22-14.03.37:411][  0]LogMaterial: Verifying Global Shaders for GLSL_430
+[2023.06.22-14.03.37:411][  0]LogSlate: Using Freetype 2.6.0
+[2023.06.22-14.03.37:412][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 0
+[2023.06.22-14.03.37:412][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 0
+[2023.06.22-14.03.37:489][  0]LogAssetRegistry: FAssetRegistry took 0.0201 seconds to start up
+[2023.06.22-14.03.37:548][  0]LogPackageLocalizationCache: Processed 5 localized package path(s) for 2 prioritized culture(s) in 0.003747 seconds
+[2023.06.22-14.03.37:548][  0]LogPakFile: New pak file ../../../CarlaUE4/Content/Paks/CarlaUE4-LinuxNoEditor.pak added to pak precacher.
+[2023.06.22-14.03.37:549][  0]LogLinux: Selected Device Profile: [LinuxNoEditor]
+[2023.06.22-14.03.37:589][  0]LogNetVersion: CarlaUE4 , NetCL: 0, EngineNetVer: 2, GameNetVer: 0 (Checksum: 439411406)
+[2023.06.22-14.03.37:722][  0]LogCarla: Loading CARLA settings from "../../../CarlaUE4/Config/CarlaSettings.ini"
+[2023.06.22-14.03.37:722][  0]LogCarla: Loading CARLA settings from "/home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini"
+[2023.06.22-14.03.37:722][  0]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.37:722][  0]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.37:722][  0]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.37:722][  0]LogCarla: Networking = Enabled
+[2023.06.22-14.03.37:722][  0]LogCarla: World Port = 2000
+[2023.06.22-14.03.37:722][  0]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.37:722][  0]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.37:722][  0]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.37:722][  0]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.37:722][  0]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.37:722][  0]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.37:722][  0]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.37:722][  0]LogCarla: Weather Id = 1
+[2023.06.22-14.03.37:722][  0]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.37:722][  0]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.37:722][  0]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.37:722][  0]LogCarla: Found 0 available weather settings.
+[2023.06.22-14.03.37:722][  0]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.37:722][  0]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.37:722][  0]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.37:722][  0]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.37:722][  0]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.37:722][  0]LogCarla: ================================================================================
+[2023.06.22-14.03.37:732][  0]LogMoviePlayer: Initializing movie player
+[2023.06.22-14.03.37:852][  0]LogUObjectArray: 31557 objects as part of root set at end of initial load.
+[2023.06.22-14.03.37:852][  0]LogUObjectAllocator: 5910048 out of 0 bytes used by permanent object pool.
+[2023.06.22-14.03.37:852][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2023.06.22-14.03.37:852][  0]LogEngine: Initializing Engine...
+[2023.06.22-14.03.37:926][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2023.06.22-14.03.37:926][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2023.06.22-14.03.37:926][  0]LogInit: Texture streaming: Enabled
+[2023.06.22-14.03.37:983][  0]LogCarla: Loading CARLA settings from "../../../CarlaUE4/Config/CarlaSettings.ini"
+[2023.06.22-14.03.37:983][  0]LogCarla: Loading CARLA settings from "/home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini"
+[2023.06.22-14.03.37:983][  0]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.37:983][  0]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.37:983][  0]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.37:983][  0]LogCarla: Networking = Enabled
+[2023.06.22-14.03.37:983][  0]LogCarla: World Port = 2000
+[2023.06.22-14.03.37:983][  0]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.37:983][  0]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.37:983][  0]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.37:983][  0]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.37:983][  0]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.37:983][  0]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.37:983][  0]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.37:983][  0]LogCarla: Weather Id = 1
+[2023.06.22-14.03.37:983][  0]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.37:983][  0]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.37:983][  0]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.37:983][  0]LogCarla: Found 0 available weather settings.
+[2023.06.22-14.03.37:983][  0]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.37:983][  0]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.37:983][  0]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.37:983][  0]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.37:983][  0]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.37:983][  0]LogCarla: ================================================================================
+[2023.06.22-14.03.37:984][  0]LogInit: Display: Game Engine Initialized.
+[2023.06.22-14.03.37:984][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2023.06.22-14.03.37:992][  0]LogInit: Display: Starting Game.
+[2023.06.22-14.03.37:992][  0]LogNet: Browse: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.38:000][  0]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.39:959][  0]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.03.40:244][  0]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.03.40:438][  0]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.03.40
+[2023.06.22-14.03.40:438][  0]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.03.40:439][  0]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.03.40:441][  0]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.03.40:465][  0]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.03.40:466][  0]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.40:466][  0]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.40:466][  0]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.40:466][  0]LogCarla: Networking = Enabled
+[2023.06.22-14.03.40:466][  0]LogCarla: World Port = 2000
+[2023.06.22-14.03.40:466][  0]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.40:466][  0]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.40:466][  0]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.40:466][  0]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.40:466][  0]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.40:466][  0]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.40:466][  0]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.40:466][  0]LogCarla: Weather Id = 1
+[2023.06.22-14.03.40:466][  0]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.40:466][  0]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.40:466][  0]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.40:466][  0]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 0 - Default
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.03.40:466][  0]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.03.40:466][  0]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.40:466][  0]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.40:466][  0]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.40:466][  0]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.40:466][  0]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.40:466][  0]LogCarla: ================================================================================
+[2023.06.22-14.03.40:475][  0]LogWorld: Bringing up level for play took: 0.228920
+[2023.06.22-14.03.40:477][  0]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.03.40:479][  0]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.03.40:721][  0]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.03.40:766][  0]LogLoad: Took 2.765833 seconds to LoadMap(/Game/Maps/Town01)
+[2023.06.22-14.03.40:815][  0]LogSlate: Took 0.000040 seconds to synchronously load lazily loaded font '../../../Engine/Content/EngineFonts/Faces/DroidSansMono.ufont' (77K)
+[2023.06.22-14.03.40:816][  0]LogLoad: (Engine Initialization) Total time: 4.46 seconds
+[2023.06.22-14.03.40:816][  0]LogExternalProfiler: No external profilers were discovered.  External profiling features will not be available.
+[2023.06.22-14.03.40:857][  0]LogRenderer: Reallocating scene render targets to support 500x500 Format 10 NumSamples 1 (Frame:1).
+[2023.06.22-14.03.41:111][  0]LogContentStreaming: Texture pool size now 2000 MB
+[2023.06.22-14.03.41:240][  1]LogLinux: Setting swap interval to 'Immediate'
+[33m[2023.06.22-14.03.41:284][  1]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.03.41:284][  1]LogCarlaServer: Restarting the level...
+[2023.06.22-14.03.41:312][  2]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.03.41:366][  2]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.43:346][  2]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.03.43:663][  2]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.03.43:877][  2]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.03.43
+[2023.06.22-14.03.43:878][  2]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.03.43:879][  2]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.03.43:879][  2]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.03.43:880][  2]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.03.43:881][  2]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.43:881][  2]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.43:881][  2]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.43:881][  2]LogCarla: Networking = Enabled
+[2023.06.22-14.03.43:881][  2]LogCarla: World Port = 2000
+[2023.06.22-14.03.43:881][  2]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.43:881][  2]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.43:881][  2]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.43:881][  2]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.43:881][  2]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.43:881][  2]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.43:881][  2]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.43:881][  2]LogCarla: Weather Id = 1
+[2023.06.22-14.03.43:881][  2]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.43:881][  2]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.43:881][  2]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.43:881][  2]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 0 - Default
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.03.43:881][  2]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.03.43:881][  2]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.43:881][  2]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.43:881][  2]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.43:881][  2]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.43:881][  2]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.43:881][  2]LogCarla: ================================================================================
+[2023.06.22-14.03.43:881][  2]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.03.43:905][  2]r.RHICmdBypass = "1"
+[2023.06.22-14.03.43:927][  2]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.03.43:940][  2]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.03.43:940][  2]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.03.43:940][  2]r.SeparateTranslucency = "1"
+[2023.06.22-14.03.43:941][  2]r.PostProcessAAQuality = "4"
+[2023.06.22-14.03.43:941][  2]r.BloomQuality = "5"
+[2023.06.22-14.03.43:941][  2]r.SSR.Quality = "3"
+[2023.06.22-14.03.43:941][  2]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.03.43:941][  2]r.SceneColorFormat = "4"
+[2023.06.22-14.03.43:941][  2]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.03.43:941][  2]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.03.43:941][  2]r.MaxAnisotropy = "8"
+[2023.06.22-14.03.43:941][  2]r.LensFlareQuality = "2"
+[2023.06.22-14.03.43:941][  2]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.03.43:941][  2]r.FastBlurThreshold = "100"
+[2023.06.22-14.03.43:941][  2]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.03.43:961][  2]r.EarlyZPass = "3"
+[2023.06.22-14.03.44:042][  2]r.EarlyZPassMovable = "1"
+[2023.06.22-14.03.44:091][  2]foliage.DitheredLOD = "1"
+[2023.06.22-14.03.44:092][  2]sg.PostProcessQuality = "3"
+[2023.06.22-14.03.44:092][  2]r.ViewDistanceScale = "1"
+[2023.06.22-14.03.44:092][  2]sg.ShadowQuality = "3"
+[2023.06.22-14.03.44:092][  2]sg.TextureQuality = "3"
+[2023.06.22-14.03.44:092][  2]sg.EffectsQuality = "3"
+[2023.06.22-14.03.44:092][  2]sg.FoliageQuality = "3"
+[2023.06.22-14.03.44:092][  2]foliage.DensityScale = "1"
+[2023.06.22-14.03.44:092][  2]grass.densityScale = "1"
+[2023.06.22-14.03.44:092][  2]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.03.44:092][  2]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.03.44:092][  2]r.DetailMode = "2"
+[2023.06.22-14.03.44:103][  2]LogWorld: Bringing up level for play took: 0.438826
+[2023.06.22-14.03.44:104][  2]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.03.44:107][  2]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.03.44:352][  2]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.03.44:407][  2]LogLoad: Took 3.041748 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.03.44:417][  2]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.03.44:417][  2]LogCarlaServer: Restarting the level...
+[2023.06.22-14.03.44:486][  3]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.03.44:598][  3]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.46:753][  3]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.03.47:104][  3]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.03.47:318][  3]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.03.47
+[2023.06.22-14.03.47:319][  3]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.03.47:320][  3]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.03.47:321][  3]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.03.47:321][  3]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.03.47:322][  3]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.47:322][  3]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.47:322][  3]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.47:322][  3]LogCarla: Networking = Enabled
+[2023.06.22-14.03.47:322][  3]LogCarla: World Port = 2000
+[2023.06.22-14.03.47:322][  3]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.47:322][  3]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.47:322][  3]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.47:322][  3]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.47:322][  3]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.47:322][  3]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.47:322][  3]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.47:322][  3]LogCarla: Weather Id = 1
+[2023.06.22-14.03.47:322][  3]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.47:322][  3]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.47:322][  3]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.47:322][  3]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 0 - Default
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.03.47:322][  3]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.03.47:322][  3]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.47:322][  3]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.47:322][  3]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.47:322][  3]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.47:322][  3]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.47:322][  3]LogCarla: ================================================================================
+[2023.06.22-14.03.47:322][  3]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.03.47:349][  3]r.RHICmdBypass = "1"
+[2023.06.22-14.03.47:371][  3]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.03.47:385][  3]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.03.47:385][  3]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.03.47:385][  3]r.SeparateTranslucency = "1"
+[2023.06.22-14.03.47:385][  3]r.PostProcessAAQuality = "4"
+[2023.06.22-14.03.47:385][  3]r.BloomQuality = "5"
+[2023.06.22-14.03.47:385][  3]r.SSR.Quality = "3"
+[2023.06.22-14.03.47:386][  3]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.03.47:386][  3]r.SceneColorFormat = "4"
+[2023.06.22-14.03.47:386][  3]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.03.47:386][  3]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.03.47:386][  3]r.MaxAnisotropy = "8"
+[2023.06.22-14.03.47:386][  3]r.LensFlareQuality = "2"
+[2023.06.22-14.03.47:386][  3]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.03.47:386][  3]r.FastBlurThreshold = "100"
+[2023.06.22-14.03.47:386][  3]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.03.47:405][  3]r.EarlyZPass = "3"
+[2023.06.22-14.03.47:482][  3]r.EarlyZPassMovable = "1"
+[2023.06.22-14.03.47:531][  3]foliage.DitheredLOD = "1"
+[2023.06.22-14.03.47:531][  3]sg.PostProcessQuality = "3"
+[2023.06.22-14.03.47:531][  3]r.ViewDistanceScale = "1"
+[2023.06.22-14.03.47:532][  3]sg.ShadowQuality = "3"
+[2023.06.22-14.03.47:532][  3]sg.TextureQuality = "3"
+[2023.06.22-14.03.47:532][  3]sg.EffectsQuality = "3"
+[2023.06.22-14.03.47:532][  3]sg.FoliageQuality = "3"
+[2023.06.22-14.03.47:532][  3]foliage.DensityScale = "1"
+[2023.06.22-14.03.47:532][  3]grass.densityScale = "1"
+[2023.06.22-14.03.47:532][  3]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.03.47:532][  3]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.03.47:532][  3]r.DetailMode = "2"
+[2023.06.22-14.03.47:542][  3]LogWorld: Bringing up level for play took: 0.437052
+[2023.06.22-14.03.47:545][  3]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.03.47:546][  3]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.03.47:787][  3]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.03.47:829][  3]LogLoad: Took 3.230873 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.03.47:837][  3]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.03.47:837][  3]LogCarlaServer: Restarting the level...
+[2023.06.22-14.03.47:896][  4]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.03.47:950][  4]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.50:000][  4]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.03.50:308][  4]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.03.50:517][  4]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.03.50
+[2023.06.22-14.03.50:519][  4]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.03.50:520][  4]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.03.50:521][  4]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.03.50:521][  4]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.03.50:523][  4]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.50:523][  4]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.50:523][  4]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.50:523][  4]LogCarla: Networking = Enabled
+[2023.06.22-14.03.50:523][  4]LogCarla: World Port = 2000
+[2023.06.22-14.03.50:523][  4]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.50:523][  4]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.50:523][  4]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.50:523][  4]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.50:523][  4]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.50:523][  4]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.50:523][  4]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.50:523][  4]LogCarla: Weather Id = 1
+[2023.06.22-14.03.50:523][  4]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.50:523][  4]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.50:523][  4]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.50:523][  4]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 0 - Default
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.03.50:523][  4]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.03.50:523][  4]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.50:523][  4]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.50:523][  4]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.50:523][  4]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.50:523][  4]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.50:523][  4]LogCarla: ================================================================================
+[2023.06.22-14.03.50:523][  4]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.03.50:548][  4]r.RHICmdBypass = "1"
+[2023.06.22-14.03.50:573][  4]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.03.50:587][  4]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.03.50:587][  4]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.03.50:587][  4]r.SeparateTranslucency = "1"
+[2023.06.22-14.03.50:587][  4]r.PostProcessAAQuality = "4"
+[2023.06.22-14.03.50:588][  4]r.BloomQuality = "5"
+[2023.06.22-14.03.50:588][  4]r.SSR.Quality = "3"
+[2023.06.22-14.03.50:588][  4]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.03.50:588][  4]r.SceneColorFormat = "4"
+[2023.06.22-14.03.50:588][  4]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.03.50:588][  4]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.03.50:588][  4]r.MaxAnisotropy = "8"
+[2023.06.22-14.03.50:588][  4]r.LensFlareQuality = "2"
+[2023.06.22-14.03.50:588][  4]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.03.50:588][  4]r.FastBlurThreshold = "100"
+[2023.06.22-14.03.50:588][  4]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.03.50:609][  4]r.EarlyZPass = "3"
+[2023.06.22-14.03.50:693][  4]r.EarlyZPassMovable = "1"
+[2023.06.22-14.03.50:742][  4]foliage.DitheredLOD = "1"
+[2023.06.22-14.03.50:742][  4]sg.PostProcessQuality = "3"
+[2023.06.22-14.03.50:742][  4]r.ViewDistanceScale = "1"
+[2023.06.22-14.03.50:742][  4]sg.ShadowQuality = "3"
+[2023.06.22-14.03.50:742][  4]sg.TextureQuality = "3"
+[2023.06.22-14.03.50:743][  4]sg.EffectsQuality = "3"
+[2023.06.22-14.03.50:743][  4]sg.FoliageQuality = "3"
+[2023.06.22-14.03.50:743][  4]foliage.DensityScale = "1"
+[2023.06.22-14.03.50:743][  4]grass.densityScale = "1"
+[2023.06.22-14.03.50:743][  4]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.03.50:743][  4]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.03.50:743][  4]r.DetailMode = "2"
+[2023.06.22-14.03.50:755][  4]LogWorld: Bringing up level for play took: 0.445846
+[2023.06.22-14.03.50:756][  4]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.03.50:758][  4]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.03.51:014][  4]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.03.51:064][  4]LogLoad: Took 3.113276 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.03.51:072][  4]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.03.51:072][  4]LogCarlaServer: Restarting the level...
+[2023.06.22-14.03.51:137][  5]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.03.51:194][  5]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.53:179][  5]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.03.53:497][  5]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.03.53:710][  5]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.03.53
+[2023.06.22-14.03.53:710][  5]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.03.53:711][  5]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.03.53:712][  5]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.03.53:712][  5]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.03.53:713][  5]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.53:713][  5]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.53:713][  5]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.53:713][  5]LogCarla: Networking = Enabled
+[2023.06.22-14.03.53:713][  5]LogCarla: World Port = 2000
+[2023.06.22-14.03.53:713][  5]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.53:713][  5]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.53:713][  5]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.53:713][  5]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.53:713][  5]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.53:713][  5]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.53:713][  5]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.53:713][  5]LogCarla: Weather Id = 1
+[2023.06.22-14.03.53:713][  5]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.53:713][  5]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.53:713][  5]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.53:713][  5]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 0 - Default
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.03.53:713][  5]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.03.53:714][  5]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.03.53:714][  5]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.03.53:714][  5]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.03.53:714][  5]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.03.53:714][  5]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.03.53:714][  5]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.03.53:714][  5]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.03.53:714][  5]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.53:714][  5]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.53:714][  5]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.53:714][  5]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.53:714][  5]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.53:714][  5]LogCarla: ================================================================================
+[2023.06.22-14.03.53:714][  5]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.03.53:741][  5]r.RHICmdBypass = "1"
+[2023.06.22-14.03.53:767][  5]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.03.53:779][  5]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.03.53:779][  5]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.03.53:779][  5]r.SeparateTranslucency = "1"
+[2023.06.22-14.03.53:779][  5]r.PostProcessAAQuality = "4"
+[2023.06.22-14.03.53:779][  5]r.BloomQuality = "5"
+[2023.06.22-14.03.53:779][  5]r.SSR.Quality = "3"
+[2023.06.22-14.03.53:779][  5]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.03.53:779][  5]r.SceneColorFormat = "4"
+[2023.06.22-14.03.53:779][  5]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.03.53:779][  5]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.03.53:779][  5]r.MaxAnisotropy = "8"
+[2023.06.22-14.03.53:780][  5]r.LensFlareQuality = "2"
+[2023.06.22-14.03.53:780][  5]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.03.53:780][  5]r.FastBlurThreshold = "100"
+[2023.06.22-14.03.53:780][  5]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.03.53:804][  5]r.EarlyZPass = "3"
+[2023.06.22-14.03.53:880][  5]r.EarlyZPassMovable = "1"
+[2023.06.22-14.03.53:931][  5]foliage.DitheredLOD = "1"
+[2023.06.22-14.03.53:931][  5]sg.PostProcessQuality = "3"
+[2023.06.22-14.03.53:932][  5]r.ViewDistanceScale = "1"
+[2023.06.22-14.03.53:932][  5]sg.ShadowQuality = "3"
+[2023.06.22-14.03.53:932][  5]sg.TextureQuality = "3"
+[2023.06.22-14.03.53:932][  5]sg.EffectsQuality = "3"
+[2023.06.22-14.03.53:932][  5]sg.FoliageQuality = "3"
+[2023.06.22-14.03.53:932][  5]foliage.DensityScale = "1"
+[2023.06.22-14.03.53:932][  5]grass.densityScale = "1"
+[2023.06.22-14.03.53:932][  5]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.03.53:932][  5]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.03.53:932][  5]r.DetailMode = "2"
+[2023.06.22-14.03.53:941][  5]LogWorld: Bringing up level for play took: 0.442808
+[2023.06.22-14.03.53:942][  5]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.03.53:944][  5]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.03.54:193][  5]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.03.54:236][  5]LogLoad: Took 3.041919 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.03.54:245][  5]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.03.54:245][  5]LogCarlaServer: Restarting the level...
+[2023.06.22-14.03.54:307][  6]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.03.54:387][  6]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.56:450][  6]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.03.56:775][  6]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.03.56:987][  6]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.03.56
+[2023.06.22-14.03.56:989][  6]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.03.56:990][  6]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.03.56:991][  6]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.03.56:991][  6]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.03.56:992][  6]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.03.56:992][  6]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.03.56:992][  6]LogCarla: [CARLA/Server]
+[2023.06.22-14.03.56:992][  6]LogCarla: Networking = Enabled
+[2023.06.22-14.03.56:992][  6]LogCarla: World Port = 2000
+[2023.06.22-14.03.56:992][  6]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.03.56:992][  6]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.03.56:992][  6]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.03.56:992][  6]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.03.56:992][  6]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.03.56:992][  6]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.03.56:992][  6]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.03.56:992][  6]LogCarla: Weather Id = 1
+[2023.06.22-14.03.56:992][  6]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.03.56:992][  6]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.03.56:992][  6]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.03.56:992][  6]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 0 - Default
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.03.56:992][  6]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.03.56:992][  6]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.03.56:992][  6]LogCarla: Quality Settings = Epic
+[2023.06.22-14.03.56:992][  6]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.03.56:992][  6]LogCarla: Added 0 sensors.
+[2023.06.22-14.03.56:992][  6]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.03.56:992][  6]LogCarla: ================================================================================
+[2023.06.22-14.03.56:992][  6]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.03.57:020][  6]r.RHICmdBypass = "1"
+[2023.06.22-14.03.57:046][  6]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.03.57:060][  6]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.03.57:061][  6]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.03.57:063][  6]r.SeparateTranslucency = "1"
+[2023.06.22-14.03.57:063][  6]r.PostProcessAAQuality = "4"
+[2023.06.22-14.03.57:063][  6]r.BloomQuality = "5"
+[2023.06.22-14.03.57:063][  6]r.SSR.Quality = "3"
+[2023.06.22-14.03.57:063][  6]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.03.57:063][  6]r.SceneColorFormat = "4"
+[2023.06.22-14.03.57:063][  6]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.03.57:063][  6]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.03.57:063][  6]r.MaxAnisotropy = "8"
+[2023.06.22-14.03.57:063][  6]r.LensFlareQuality = "2"
+[2023.06.22-14.03.57:063][  6]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.03.57:063][  6]r.FastBlurThreshold = "100"
+[2023.06.22-14.03.57:063][  6]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.03.57:097][  6]r.EarlyZPass = "3"
+[2023.06.22-14.03.57:200][  6]r.EarlyZPassMovable = "1"
+[2023.06.22-14.03.57:256][  6]foliage.DitheredLOD = "1"
+[2023.06.22-14.03.57:256][  6]sg.PostProcessQuality = "3"
+[2023.06.22-14.03.57:256][  6]r.ViewDistanceScale = "1"
+[2023.06.22-14.03.57:256][  6]sg.ShadowQuality = "3"
+[2023.06.22-14.03.57:257][  6]sg.TextureQuality = "3"
+[2023.06.22-14.03.57:257][  6]sg.EffectsQuality = "3"
+[2023.06.22-14.03.57:257][  6]sg.FoliageQuality = "3"
+[2023.06.22-14.03.57:257][  6]foliage.DensityScale = "1"
+[2023.06.22-14.03.57:257][  6]grass.densityScale = "1"
+[2023.06.22-14.03.57:257][  6]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.03.57:257][  6]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.03.57:257][  6]r.DetailMode = "2"
+[2023.06.22-14.03.57:267][  6]LogWorld: Bringing up level for play took: 0.489767
+[2023.06.22-14.03.57:268][  6]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.03.57:270][  6]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.03.57:528][  6]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.03.57:573][  6]LogLoad: Took 3.185787 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.03.57:587][  6]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.03.57:587][  6]LogCarlaServer: Restarting the level...
+[2023.06.22-14.03.57:654][  7]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.03.57:722][  7]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.03.59:749][  7]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.04.00:055][  7]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.04.00:264][  7]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.04.00
+[2023.06.22-14.04.00:264][  7]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.04.00:265][  7]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.04.00:266][  7]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.04.00:266][  7]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.04.00:267][  7]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.04.00:267][  7]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.04.00:267][  7]LogCarla: [CARLA/Server]
+[2023.06.22-14.04.00:267][  7]LogCarla: Networking = Enabled
+[2023.06.22-14.04.00:267][  7]LogCarla: World Port = 2000
+[2023.06.22-14.04.00:267][  7]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.04.00:267][  7]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.04.00:267][  7]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.04.00:267][  7]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.04.00:267][  7]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.04.00:267][  7]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.04.00:267][  7]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.04.00:267][  7]LogCarla: Weather Id = 1
+[2023.06.22-14.04.00:267][  7]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.04.00:267][  7]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.04.00:267][  7]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.04.00:267][  7]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 0 - Default
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.04.00:267][  7]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.04.00:267][  7]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.04.00:267][  7]LogCarla: Quality Settings = Epic
+[2023.06.22-14.04.00:267][  7]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.04.00:267][  7]LogCarla: Added 0 sensors.
+[2023.06.22-14.04.00:267][  7]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.04.00:267][  7]LogCarla: ================================================================================
+[2023.06.22-14.04.00:268][  7]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.04.00:296][  7]r.RHICmdBypass = "1"
+[2023.06.22-14.04.00:320][  7]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.04.00:335][  7]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.04.00:335][  7]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.04.00:335][  7]r.SeparateTranslucency = "1"
+[2023.06.22-14.04.00:335][  7]r.PostProcessAAQuality = "4"
+[2023.06.22-14.04.00:335][  7]r.BloomQuality = "5"
+[2023.06.22-14.04.00:335][  7]r.SSR.Quality = "3"
+[2023.06.22-14.04.00:335][  7]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.04.00:335][  7]r.SceneColorFormat = "4"
+[2023.06.22-14.04.00:335][  7]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.04.00:335][  7]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.04.00:335][  7]r.MaxAnisotropy = "8"
+[2023.06.22-14.04.00:335][  7]r.LensFlareQuality = "2"
+[2023.06.22-14.04.00:335][  7]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.04.00:335][  7]r.FastBlurThreshold = "100"
+[2023.06.22-14.04.00:335][  7]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.04.00:361][  7]r.EarlyZPass = "3"
+[2023.06.22-14.04.00:437][  7]r.EarlyZPassMovable = "1"
+[2023.06.22-14.04.00:488][  7]foliage.DitheredLOD = "1"
+[2023.06.22-14.04.00:489][  7]sg.PostProcessQuality = "3"
+[2023.06.22-14.04.00:489][  7]r.ViewDistanceScale = "1"
+[2023.06.22-14.04.00:489][  7]sg.ShadowQuality = "3"
+[2023.06.22-14.04.00:489][  7]sg.TextureQuality = "3"
+[2023.06.22-14.04.00:489][  7]sg.EffectsQuality = "3"
+[2023.06.22-14.04.00:489][  7]sg.FoliageQuality = "3"
+[2023.06.22-14.04.00:489][  7]foliage.DensityScale = "1"
+[2023.06.22-14.04.00:489][  7]grass.densityScale = "1"
+[2023.06.22-14.04.00:489][  7]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.04.00:489][  7]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.04.00:489][  7]r.DetailMode = "2"
+[2023.06.22-14.04.00:499][  7]LogWorld: Bringing up level for play took: 0.442542
+[2023.06.22-14.04.00:500][  7]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.04.00:501][  7]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.04.00:755][  7]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.04.00:800][  7]LogLoad: Took 3.078398 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.04.00:809][  7]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.04.00:809][  7]LogCarlaServer: Restarting the level...
+[2023.06.22-14.04.00:874][  8]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.04.00:937][  8]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.04.02:974][  8]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.04.03:291][  8]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.04.03:527][  8]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.04.03
+[2023.06.22-14.04.03:528][  8]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.04.03:529][  8]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.04.03:530][  8]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.04.03:530][  8]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.04.03:531][  8]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.04.03:531][  8]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.04.03:531][  8]LogCarla: [CARLA/Server]
+[2023.06.22-14.04.03:531][  8]LogCarla: Networking = Enabled
+[2023.06.22-14.04.03:531][  8]LogCarla: World Port = 2000
+[2023.06.22-14.04.03:531][  8]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.04.03:531][  8]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.04.03:531][  8]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.04.03:531][  8]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.04.03:531][  8]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.04.03:531][  8]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.04.03:531][  8]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.04.03:531][  8]LogCarla: Weather Id = 1
+[2023.06.22-14.04.03:531][  8]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.04.03:531][  8]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.04.03:531][  8]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.04.03:531][  8]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 0 - Default
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.04.03:531][  8]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.04.03:531][  8]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.04.03:531][  8]LogCarla: Quality Settings = Epic
+[2023.06.22-14.04.03:531][  8]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.04.03:531][  8]LogCarla: Added 0 sensors.
+[2023.06.22-14.04.03:531][  8]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.04.03:531][  8]LogCarla: ================================================================================
+[2023.06.22-14.04.03:531][  8]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.04.03:563][  8]r.RHICmdBypass = "1"
+[2023.06.22-14.04.03:592][  8]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.04.03:607][  8]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.04.03:607][  8]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.04.03:607][  8]r.SeparateTranslucency = "1"
+[2023.06.22-14.04.03:607][  8]r.PostProcessAAQuality = "4"
+[2023.06.22-14.04.03:607][  8]r.BloomQuality = "5"
+[2023.06.22-14.04.03:607][  8]r.SSR.Quality = "3"
+[2023.06.22-14.04.03:607][  8]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.04.03:607][  8]r.SceneColorFormat = "4"
+[2023.06.22-14.04.03:607][  8]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.04.03:607][  8]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.04.03:607][  8]r.MaxAnisotropy = "8"
+[2023.06.22-14.04.03:607][  8]r.LensFlareQuality = "2"
+[2023.06.22-14.04.03:607][  8]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.04.03:607][  8]r.FastBlurThreshold = "100"
+[2023.06.22-14.04.03:607][  8]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.04.03:634][  8]r.EarlyZPass = "3"
+[2023.06.22-14.04.03:721][  8]r.EarlyZPassMovable = "1"
+[2023.06.22-14.04.03:780][  8]foliage.DitheredLOD = "1"
+[2023.06.22-14.04.03:781][  8]sg.PostProcessQuality = "3"
+[2023.06.22-14.04.03:781][  8]r.ViewDistanceScale = "1"
+[2023.06.22-14.04.03:781][  8]sg.ShadowQuality = "3"
+[2023.06.22-14.04.03:781][  8]sg.TextureQuality = "3"
+[2023.06.22-14.04.03:781][  8]sg.EffectsQuality = "3"
+[2023.06.22-14.04.03:781][  8]sg.FoliageQuality = "3"
+[2023.06.22-14.04.03:781][  8]foliage.DensityScale = "1"
+[2023.06.22-14.04.03:781][  8]grass.densityScale = "1"
+[2023.06.22-14.04.03:781][  8]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.04.03:781][  8]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.04.03:781][  8]r.DetailMode = "2"
+[2023.06.22-14.04.03:790][  8]LogWorld: Bringing up level for play took: 0.497920
+[2023.06.22-14.04.03:792][  8]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.04.03:793][  8]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.04.04:045][  8]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.04.04:090][  8]LogLoad: Took 3.152719 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.04.04:103][  8]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.04.04:103][  8]LogCarlaServer: Restarting the level...
+[2023.06.22-14.04.04:169][  9]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.04.04:235][  9]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.04.06:338][  9]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.04.06:661][  9]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.04.06:867][  9]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.04.06
+[2023.06.22-14.04.06:867][  9]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.04.06:868][  9]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.04.06:869][  9]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.04.06:869][  9]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.04.06:870][  9]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.04.06:870][  9]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.04.06:870][  9]LogCarla: [CARLA/Server]
+[2023.06.22-14.04.06:870][  9]LogCarla: Networking = Enabled
+[2023.06.22-14.04.06:870][  9]LogCarla: World Port = 2000
+[2023.06.22-14.04.06:870][  9]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.04.06:870][  9]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.04.06:870][  9]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.04.06:870][  9]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.04.06:870][  9]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.04.06:870][  9]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.04.06:870][  9]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.04.06:870][  9]LogCarla: Weather Id = 1
+[2023.06.22-14.04.06:870][  9]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.04.06:870][  9]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.04.06:870][  9]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.04.06:870][  9]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 0 - Default
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.04.06:870][  9]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.04.06:871][  9]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.04.06:871][  9]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.04.06:871][  9]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.04.06:871][  9]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.04.06:871][  9]LogCarla: Quality Settings = Epic
+[2023.06.22-14.04.06:871][  9]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.04.06:871][  9]LogCarla: Added 0 sensors.
+[2023.06.22-14.04.06:871][  9]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.04.06:871][  9]LogCarla: ================================================================================
+[2023.06.22-14.04.06:871][  9]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.04.06:900][  9]r.RHICmdBypass = "1"
+[2023.06.22-14.04.06:928][  9]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.04.06:940][  9]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.04.06:940][  9]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.04.06:940][  9]r.SeparateTranslucency = "1"
+[2023.06.22-14.04.06:940][  9]r.PostProcessAAQuality = "4"
+[2023.06.22-14.04.06:940][  9]r.BloomQuality = "5"
+[2023.06.22-14.04.06:941][  9]r.SSR.Quality = "3"
+[2023.06.22-14.04.06:941][  9]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.04.06:941][  9]r.SceneColorFormat = "4"
+[2023.06.22-14.04.06:941][  9]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.04.06:941][  9]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.04.06:941][  9]r.MaxAnisotropy = "8"
+[2023.06.22-14.04.06:941][  9]r.LensFlareQuality = "2"
+[2023.06.22-14.04.06:941][  9]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.04.06:941][  9]r.FastBlurThreshold = "100"
+[2023.06.22-14.04.06:941][  9]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.04.06:967][  9]r.EarlyZPass = "3"
+[2023.06.22-14.04.07:049][  9]r.EarlyZPassMovable = "1"
+[2023.06.22-14.04.07:101][  9]foliage.DitheredLOD = "1"
+[2023.06.22-14.04.07:101][  9]sg.PostProcessQuality = "3"
+[2023.06.22-14.04.07:101][  9]r.ViewDistanceScale = "1"
+[2023.06.22-14.04.07:101][  9]sg.ShadowQuality = "3"
+[2023.06.22-14.04.07:101][  9]sg.TextureQuality = "3"
+[2023.06.22-14.04.07:101][  9]sg.EffectsQuality = "3"
+[2023.06.22-14.04.07:101][  9]sg.FoliageQuality = "3"
+[2023.06.22-14.04.07:101][  9]foliage.DensityScale = "1"
+[2023.06.22-14.04.07:101][  9]grass.densityScale = "1"
+[2023.06.22-14.04.07:101][  9]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.04.07:101][  9]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.04.07:101][  9]r.DetailMode = "2"
+[2023.06.22-14.04.07:113][  9]LogWorld: Bringing up level for play took: 0.450619
+[2023.06.22-14.04.07:115][  9]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.04.07:117][  9]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.04.07:369][  9]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.04.07:431][  9]LogLoad: Took 3.195563 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.04.07:439][  9]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.04.07:439][  9]LogCarlaServer: Restarting the level...
+[2023.06.22-14.04.07:502][ 10]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.04.07:571][ 10]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.04.09:464][ 10]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.04.09:745][ 10]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.04.09:949][ 10]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.04.09
+[2023.06.22-14.04.09:951][ 10]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.04.09:951][ 10]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.04.09:952][ 10]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.04.09:952][ 10]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.04.09:954][ 10]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.04.09:954][ 10]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.04.09:954][ 10]LogCarla: [CARLA/Server]
+[2023.06.22-14.04.09:954][ 10]LogCarla: Networking = Enabled
+[2023.06.22-14.04.09:954][ 10]LogCarla: World Port = 2000
+[2023.06.22-14.04.09:954][ 10]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.04.09:954][ 10]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.04.09:954][ 10]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.04.09:954][ 10]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.04.09:954][ 10]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.04.09:954][ 10]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.04.09:954][ 10]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.04.09:954][ 10]LogCarla: Weather Id = 1
+[2023.06.22-14.04.09:954][ 10]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.04.09:954][ 10]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.04.09:954][ 10]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.04.09:954][ 10]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 0 - Default
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.04.09:954][ 10]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.04.09:954][ 10]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.04.09:954][ 10]LogCarla: Quality Settings = Epic
+[2023.06.22-14.04.09:954][ 10]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.04.09:954][ 10]LogCarla: Added 0 sensors.
+[2023.06.22-14.04.09:954][ 10]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.04.09:954][ 10]LogCarla: ================================================================================
+[2023.06.22-14.04.09:954][ 10]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.04.09:979][ 10]r.RHICmdBypass = "1"
+[2023.06.22-14.04.10:002][ 10]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.04.10:013][ 10]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.04.10:013][ 10]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.04.10:013][ 10]r.SeparateTranslucency = "1"
+[2023.06.22-14.04.10:013][ 10]r.PostProcessAAQuality = "4"
+[2023.06.22-14.04.10:013][ 10]r.BloomQuality = "5"
+[2023.06.22-14.04.10:014][ 10]r.SSR.Quality = "3"
+[2023.06.22-14.04.10:014][ 10]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.04.10:014][ 10]r.SceneColorFormat = "4"
+[2023.06.22-14.04.10:014][ 10]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.04.10:014][ 10]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.04.10:014][ 10]r.MaxAnisotropy = "8"
+[2023.06.22-14.04.10:014][ 10]r.LensFlareQuality = "2"
+[2023.06.22-14.04.10:014][ 10]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.04.10:014][ 10]r.FastBlurThreshold = "100"
+[2023.06.22-14.04.10:014][ 10]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.04.10:036][ 10]r.EarlyZPass = "3"
+[2023.06.22-14.04.10:103][ 10]r.EarlyZPassMovable = "1"
+[2023.06.22-14.04.10:149][ 10]foliage.DitheredLOD = "1"
+[2023.06.22-14.04.10:149][ 10]sg.PostProcessQuality = "3"
+[2023.06.22-14.04.10:150][ 10]r.ViewDistanceScale = "1"
+[2023.06.22-14.04.10:150][ 10]sg.ShadowQuality = "3"
+[2023.06.22-14.04.10:150][ 10]sg.TextureQuality = "3"
+[2023.06.22-14.04.10:150][ 10]sg.EffectsQuality = "3"
+[2023.06.22-14.04.10:150][ 10]sg.FoliageQuality = "3"
+[2023.06.22-14.04.10:150][ 10]foliage.DensityScale = "1"
+[2023.06.22-14.04.10:150][ 10]grass.densityScale = "1"
+[2023.06.22-14.04.10:150][ 10]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.04.10:150][ 10]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.04.10:150][ 10]r.DetailMode = "2"
+[2023.06.22-14.04.10:159][ 10]LogWorld: Bringing up level for play took: 0.412414
+[2023.06.22-14.04.10:160][ 10]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.04.10:161][ 10]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.04.10:393][ 10]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.04.10:434][ 10]LogLoad: Took 2.863185 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.04.10:443][ 10]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.04.10:443][ 10]LogCarlaServer: Restarting the level...
+[2023.06.22-14.04.10:495][ 11]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.04.10:575][ 11]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.04.12:388][ 11]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.04.12:681][ 11]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.04.12:888][ 11]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.04.12
+[2023.06.22-14.04.12:889][ 11]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.04.12:889][ 11]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.04.12:890][ 11]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.04.12:890][ 11]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.04.12:892][ 11]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.04.12:892][ 11]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.04.12:892][ 11]LogCarla: [CARLA/Server]
+[2023.06.22-14.04.12:892][ 11]LogCarla: Networking = Enabled
+[2023.06.22-14.04.12:892][ 11]LogCarla: World Port = 2000
+[2023.06.22-14.04.12:892][ 11]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.04.12:892][ 11]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.04.12:892][ 11]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.04.12:892][ 11]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.04.12:892][ 11]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.04.12:892][ 11]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.04.12:892][ 11]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.04.12:892][ 11]LogCarla: Weather Id = 1
+[2023.06.22-14.04.12:892][ 11]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.04.12:892][ 11]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.04.12:892][ 11]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.04.12:892][ 11]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 0 - Default
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.04.12:892][ 11]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.04.12:892][ 11]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.04.12:892][ 11]LogCarla: Quality Settings = Epic
+[2023.06.22-14.04.12:892][ 11]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.04.12:892][ 11]LogCarla: Added 0 sensors.
+[2023.06.22-14.04.12:892][ 11]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.04.12:892][ 11]LogCarla: ================================================================================
+[2023.06.22-14.04.12:892][ 11]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.04.12:927][ 11]r.RHICmdBypass = "1"
+[2023.06.22-14.04.12:954][ 11]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.04.12:965][ 11]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.04.12:965][ 11]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.04.12:965][ 11]r.SeparateTranslucency = "1"
+[2023.06.22-14.04.12:965][ 11]r.PostProcessAAQuality = "4"
+[2023.06.22-14.04.12:965][ 11]r.BloomQuality = "5"
+[2023.06.22-14.04.12:965][ 11]r.SSR.Quality = "3"
+[2023.06.22-14.04.12:965][ 11]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.04.12:965][ 11]r.SceneColorFormat = "4"
+[2023.06.22-14.04.12:965][ 11]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.04.12:965][ 11]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.04.12:965][ 11]r.MaxAnisotropy = "8"
+[2023.06.22-14.04.12:965][ 11]r.LensFlareQuality = "2"
+[2023.06.22-14.04.12:965][ 11]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.04.12:965][ 11]r.FastBlurThreshold = "100"
+[2023.06.22-14.04.12:966][ 11]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.04.12:990][ 11]r.EarlyZPass = "3"
+[2023.06.22-14.04.13:091][ 11]r.EarlyZPassMovable = "1"
+[2023.06.22-14.04.13:140][ 11]foliage.DitheredLOD = "1"
+[2023.06.22-14.04.13:140][ 11]sg.PostProcessQuality = "3"
+[2023.06.22-14.04.13:140][ 11]r.ViewDistanceScale = "1"
+[2023.06.22-14.04.13:140][ 11]sg.ShadowQuality = "3"
+[2023.06.22-14.04.13:140][ 11]sg.TextureQuality = "3"
+[2023.06.22-14.04.13:140][ 11]sg.EffectsQuality = "3"
+[2023.06.22-14.04.13:140][ 11]sg.FoliageQuality = "3"
+[2023.06.22-14.04.13:140][ 11]foliage.DensityScale = "1"
+[2023.06.22-14.04.13:140][ 11]grass.densityScale = "1"
+[2023.06.22-14.04.13:140][ 11]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.04.13:140][ 11]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.04.13:140][ 11]r.DetailMode = "2"
+[2023.06.22-14.04.13:154][ 11]LogWorld: Bringing up level for play took: 0.471741
+[2023.06.22-14.04.13:155][ 11]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.04.13:157][ 11]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.04.13:414][ 11]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.04.13:459][ 11]LogLoad: Took 2.884621 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.04.13:469][ 11]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.04.13:469][ 11]LogCarlaServer: Restarting the level...
+[2023.06.22-14.04.13:534][ 12]LogNet: Browse: /Game/Maps/Town01?Name=Player?restart
+[2023.06.22-14.04.13:626][ 12]LogLoad: LoadMap: /Game/Maps/Town01?Name=Player
+[2023.06.22-14.04.15:702][ 12]LogAIModule: Creating AISystem for world Town01
+[2023.06.22-14.04.16:009][ 12]LogLoad: Game class is 'CarlaGameMode_C'
+[2023.06.22-14.04.16:223][ 12]LogWorld: Bringing World /Game/Maps/Town01.Town01 up for play (max tick rate 0) at 2023.06.22-16.04.16
+[2023.06.22-14.04.16:224][ 12]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.ini
+[2023.06.22-14.04.16:225][ 12]LogCarla: Loading weather description from ../../../CarlaUE4/Config/CarlaWeather.Town01.ini
+[2023.06.22-14.04.16:226][ 12]LogCarlaServer: Waiting for the client to connect...
+ERROR: tcpserver 0 : unable to accept connection: bind: Address already in use 
+ERROR: tcpserver 0 : error reading message: Bad file descriptor 
+[33m[2023.06.22-14.04.16:226][ 12]LogCarlaServer: Warning: Failed to initialize, server needs restart
+[0m[2023.06.22-14.04.16:227][ 12]LogCarla: == CARLA Settings ==============================================================
+[2023.06.22-14.04.16:227][ 12]LogCarla: Last settings file loaded: /home/simon/Repositories/deep_imitative_models/dim/env/config/CarlaSettingsP2000.ini
+[2023.06.22-14.04.16:227][ 12]LogCarla: [CARLA/Server]
+[2023.06.22-14.04.16:227][ 12]LogCarla: Networking = Enabled
+[2023.06.22-14.04.16:227][ 12]LogCarla: World Port = 2000
+[2023.06.22-14.04.16:227][ 12]LogCarla: Server Time-out = 900000 ms
+[2023.06.22-14.04.16:227][ 12]LogCarla: Synchronous Mode = Enabled
+[2023.06.22-14.04.16:227][ 12]LogCarla: Send Non-Player Agents Info = Disabled
+[2023.06.22-14.04.16:227][ 12]LogCarla: [CARLA/LevelSettings]
+[2023.06.22-14.04.16:227][ 12]LogCarla: Player Vehicle        = Default
+[2023.06.22-14.04.16:227][ 12]LogCarla: Number Of Vehicles    = 15
+[2023.06.22-14.04.16:227][ 12]LogCarla: Number Of Pedestrians = 30
+[2023.06.22-14.04.16:227][ 12]LogCarla: Weather Id = 1
+[2023.06.22-14.04.16:227][ 12]LogCarla: Seed Vehicle Spawner = 123456789
+[2023.06.22-14.04.16:227][ 12]LogCarla: Seed Pedestrian Spawner = 123456789
+[2023.06.22-14.04.16:227][ 12]LogCarla: Two-Wheeled Vehicles = Enabled
+[2023.06.22-14.04.16:227][ 12]LogCarla: Found 15 available weather settings.
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 0 - Default
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 1 - ClearNoon
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 2 - CloudyNoon
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 3 - WetNoon
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 4 - WetCloudyNoon
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 5 - MidRainyNoon
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 6 - HardRainNoon
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 7 - SoftRainNoon
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 8 - ClearSunset
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 9 - CloudySunset
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 10 - WetSunset
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 11 - WetCloudySunset
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 12 - MidRainSunset
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 13 - HardRainSunset
+[2023.06.22-14.04.16:227][ 12]LogCarla:   * 14 - SoftRainSunset
+[2023.06.22-14.04.16:227][ 12]LogCarla: [CARLA/QualitySettings]
+[2023.06.22-14.04.16:227][ 12]LogCarla: Quality Settings = Epic
+[2023.06.22-14.04.16:227][ 12]LogCarla: [CARLA/Sensor]
+[2023.06.22-14.04.16:227][ 12]LogCarla: Added 0 sensors.
+[2023.06.22-14.04.16:227][ 12]LogCarla: Semantic Segmentation = Disabled
+[2023.06.22-14.04.16:227][ 12]LogCarla: ================================================================================
+[2023.06.22-14.04.16:227][ 12]r.AmbientOcclusionLevels = "-1"
+[2023.06.22-14.04.16:255][ 12]r.RHICmdBypass = "1"
+[2023.06.22-14.04.16:282][ 12]r.DefaultFeature.AntiAliasing = "2"
+[2023.06.22-14.04.16:295][ 12]r.Streaming.PoolSize = "2000"
+[2023.06.22-14.04.16:295][ 12]r.MinScreenRadiusForLights = "0.03"
+[2023.06.22-14.04.16:296][ 12]r.SeparateTranslucency = "1"
+[2023.06.22-14.04.16:296][ 12]r.PostProcessAAQuality = "4"
+[2023.06.22-14.04.16:296][ 12]r.BloomQuality = "5"
+[2023.06.22-14.04.16:296][ 12]r.SSR.Quality = "3"
+[2023.06.22-14.04.16:296][ 12]r.DepthOfFieldQuality = "2"
+[2023.06.22-14.04.16:296][ 12]r.SceneColorFormat = "4"
+[2023.06.22-14.04.16:296][ 12]r.TranslucencyVolumeBlur = "1"
+[2023.06.22-14.04.16:296][ 12]r.TranslucencyLightingVolumeDim = "64"
+[2023.06.22-14.04.16:296][ 12]r.MaxAnisotropy = "8"
+[2023.06.22-14.04.16:296][ 12]r.LensFlareQuality = "2"
+[2023.06.22-14.04.16:296][ 12]r.SceneColorFringeQuality = "1"
+[2023.06.22-14.04.16:296][ 12]r.FastBlurThreshold = "100"
+[2023.06.22-14.04.16:296][ 12]r.SSR.MaxRoughness = "-1"
+[2023.06.22-14.04.16:318][ 12]r.EarlyZPass = "3"
+[2023.06.22-14.04.16:401][ 12]r.EarlyZPassMovable = "1"
+[2023.06.22-14.04.16:451][ 12]foliage.DitheredLOD = "1"
+[2023.06.22-14.04.16:451][ 12]sg.PostProcessQuality = "3"
+[2023.06.22-14.04.16:451][ 12]r.ViewDistanceScale = "1"
+[2023.06.22-14.04.16:451][ 12]sg.ShadowQuality = "3"
+[2023.06.22-14.04.16:451][ 12]sg.TextureQuality = "3"
+[2023.06.22-14.04.16:451][ 12]sg.EffectsQuality = "3"
+[2023.06.22-14.04.16:451][ 12]sg.FoliageQuality = "3"
+[2023.06.22-14.04.16:451][ 12]foliage.DensityScale = "1"
+[2023.06.22-14.04.16:451][ 12]grass.densityScale = "1"
+[2023.06.22-14.04.16:451][ 12]r.TranslucentLightingVolume = "1"
+[2023.06.22-14.04.16:451][ 12]r.LightShaftDownSampleFactor = "2"
+[2023.06.22-14.04.16:451][ 12]r.DetailMode = "2"
+[2023.06.22-14.04.16:462][ 12]LogWorld: Bringing up level for play took: 0.451927
+[2023.06.22-14.04.16:465][ 12]LogCarla: Changing weather settings to "ClearNoon"
+[2023.06.22-14.04.16:467][ 12]LogCarla: Found 152 PlayerStart positions for spawning vehicles
+[2023.06.22-14.04.16:715][ 12]LogCarla: Spawned all 15 requested vehicles
+[2023.06.22-14.04.16:764][ 12]LogLoad: Took 3.137951 seconds to LoadMap(/Game/Maps/Town01)
+[33m[2023.06.22-14.04.16:772][ 12]LogCarlaServer: Warning: Client disconnected, server needs restart
+[0m[2023.06.22-14.04.16:772][ 12]LogCarlaServer: Restarting the level...
+[2023.06.22-14.04.16:832][ 13]LogSlate: Request Window 'CarlaUE4 (64-bit, GLSL_430)' being destroyed
+[2023.06.22-14.04.16:949][ 13]LogSlate: Window 'CarlaUE4 (64-bit, GLSL_430)' being destroyed
+[2023.06.22-14.04.16:960][ 13]LogEngine: All Windows Closed
+[2023.06.22-14.04.16:960][ 13]LogLinux: FLinuxPlatformMisc::RequestExit(0)
+[2023.06.22-14.04.16:960][ 13]LogGenericPlatformMisc: FPlatformMisc::RequestExit(0)
+[2023.06.22-14.04.16:998][ 14]LogExit: Preparing to exit.
+[2023.06.22-14.04.16:998][ 14]LogMoviePlayer: Shutting down movie player
+[2023.06.22-14.04.17:029][ 14]LogExit: Game engine shut down
+[2023.06.22-14.04.17:130][ 14]LogExit: Object subsystem successfully closed.
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module AutomationController (148)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module AutomationWorker (146)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module AIModule (144)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module GameplayDebugger (143)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (140)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (138)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (136)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module CharacterAI (134)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module SessionServices (132)
+[2023.06.22-14.04.17:236][ 14]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (130)
+[2023.06.22-14.04.17:237][ 14]LogModuleManager: Shutting down and abandoning module MovieScene (128)
+[2023.06.22-14.04.17:237][ 14]LogModuleManager: Shutting down and abandoning module GeometryCache (126)
+[2023.06.22-14.04.17:237][ 14]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (124)
+[2023.06.22-14.04.17:237][ 14]LogModuleManager: Shutting down and abandoning module AnalyticsET (122)
+[2023.06.22-14.04.17:237][ 14]LogModuleManager: Shutting down and abandoning module ProfilerService (120)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module TaskGraph (118)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (116)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (114)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module CableComponent (112)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (110)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module ActorSequence (106)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module MediaCompositing (104)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module PerformanceMonitor (102)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module CarlaUE4 (100)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (98)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module ImmediatePhysics (96)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module UdpMessaging (94)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module TcpMessaging (92)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module FacialAnimation (90)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (88)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Paper2D (86)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module PhysXVehicles (84)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Carla (82)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module ImgMedia (80)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module PacketHandler (78)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (76)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module MediaAssets (74)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Overlay (72)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module UMG (70)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module SlateReflector (68)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Slate (66)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module MRMesh (64)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Messaging (62)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (60)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module AudioMixerSDL (58)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module ALAudio (56)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Networking (54)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Core (50)
+[2023.06.22-14.04.17:258][ 14]LogModuleManager: Shutting down and abandoning module Media (48)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module LevelSequence (46)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module ImageWrapper (42)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module OpenGLDrv (40)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module InputCore (38)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module PhysXCooking (36)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module LinuxDeviceProfileSelector (34)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (30)
+[2023.06.22-14.04.17:263][ 14]LogModuleManager: Shutting down and abandoning module HTTP (29)
+[2023.06.22-14.04.17:263][ 14]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2023.06.22-14.04.17:263][ 14]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B006D3FE6-2506-1016-0003-039E0F6C19A8%7D&AppID=UEGame.UnrealEngine.Release%7C675BF8694238308FA9368292CC440350%7CCARLA%20UE4&AppVersion=4.18.3-0%2B%2B%2BUE4%2BRelease-4.18&UserID=ANON-%7B006E282E-1B05-0E1D-001E-02F614734979%7D%7C%7C&AppEnvironment=datacollector-source&UploadType=eteventstream] status=Processing
+[2023.06.22-14.04.17:263][ 14]LogHttp: Display: Sleeping 0.5s to wait for 1 outstanding Http requests.
+[2023.06.22-14.04.17:792][ 14]LogModuleManager: Shutting down and abandoning module SSL (28)
+[2023.06.22-14.04.17:792][ 14]LogModuleManager: Shutting down and abandoning module ShaderCore (24)
+[2023.06.22-14.04.17:792][ 14]LogModuleManager: Shutting down and abandoning module Landscape (22)
+[2023.06.22-14.04.17:792][ 14]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (20)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (18)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module Renderer (16)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module Engine (14)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module CoreUObject (12)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module NetworkFile (10)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (8)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
+[2023.06.22-14.04.17:793][ 14]LogModuleManager: Shutting down and abandoning module PakFile (2)
+[2023.06.22-14.04.17:796][ 14]LogExit: Exiting.
+[2023.06.22-14.04.17:796][ 14]LogInit: Tearing down SDL.

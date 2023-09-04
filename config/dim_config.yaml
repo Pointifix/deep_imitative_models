@@ -60,7 +60,7 @@ dim:
     weight_scheme: "uniform"
     waypoint_count: 15
     
-  model_path: "${env:DIMROOT}/models/model_0/"
+  model_path: "${env:DIMROOT}/../data/esp_train_results/2023-06/06-19-19-45-09_carla_town01_A1_T20_v2_precog.bijection.social_convrnn.SocialConvRNN_/"
   checkpoint_path: None
   old_version: False
 
@@ -136,7 +136,7 @@ trackers:
 plotting:
   hires_plot: 0
   save_plots: 1
-  plot: 1
+  plot: 0
   # Will remove the row when saving the plots.
   remove_second_row: 1
   dpi: 96

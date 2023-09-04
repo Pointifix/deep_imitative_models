@@ -119,9 +119,8 @@ def run_episode(client,
 
     # ---------------------------------------
     # TODO incorporate pasts of other agents!
-    # ---------------------------------------    
-    log.warning("Defaulting to a hardcoded A past of 1")    
-    A_past = 5
+    # ---------------------------------------
+    A_past = dataconf.shapes.A
 
     # Ensure all previous episodes were properly concluded.
     for em in metrics.all_episode_metrics: assert(em.concluded)
@@ -176,13 +175,13 @@ def run_episode(client,
         else:
             stationary, stuck = False, False
                 
-        turn_tracker.index_new_measurement(measurement)            
+        turn_tracker.index_new_measurement(measurement)
 
         # -----------------------
         # Instantiate the object that represents all observations at the current time.
         # -----------------------
         current_obs = preproc.PlayerObservations(
-            measurement_buffer, t_index=-1, radius=200, A=A_past, waypointer=waypointer, frame=frame)
+            measurement_buffer, t_index=-1, radius=25, A=A_past, waypointer=waypointer, frame=frame)
         # Store some tracking data in the observation.
         current_obs.is_turning = turn_tracker.is_turning()
         current_obs.is_stuck = stuck
@@ -377,10 +376,12 @@ def run_episode(client,
 
 def set_up_directories(episode_params, cfg, mainconf, dataconf):
     directory = '{}/episode_{:06d}/'.format(episode_params.root_dir, episode_params.episode)
-    os.makedirs(directory)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
     if mainconf.save_dim_feeds or dataconf.save_data:
         dim_feeds_dir = directory + "/dim_feeds/"
-        os.makedirs(dim_feeds_dir)
+        if not os.path.exists(dim_feeds_dir):
+            os.makedirs(dim_feeds_dir)
     else:
         dim_feeds_dir = None
 
