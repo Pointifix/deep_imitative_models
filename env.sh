@@ -1,7 +1,7 @@
 export DIMROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # New users should add their local carla path and python env here:
-export PYCARLA=~/dev/carla_release/PythonClient/
+export PYCARLA=/home/simon/CARLA/PythonClient
 
 # Enable carla importing
 export PYTHONPATH=$PYCARLA:$PYTHONPATH

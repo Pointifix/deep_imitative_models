@@ -1,4 +1,3 @@
-
 import attrdict
 import collections
 import json
@@ -8,6 +7,8 @@ import os
 import pdb
 import scipy.spatial
 import skimage.transform as skt
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 import carla.transform as transform
 from carla.transform import Translation, Rotation
@@ -18,14 +19,18 @@ import precog.utils.img_util as imgu
 import precog.utils.tensor_util as tensoru
 import precog.dataset.serialized_dataset as serialized_dataset
 
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # Importing Axes3D for 3D plot
+
 log = logging.getLogger(os.path.basename(__file__))
 np.set_printoptions(suppress=True, precision=4)
-    
+
 # Convert protobuf messages to numpy before we dill/pickle them.
 vector3_to_np = lambda v: np.array([v.x, v.y, v.z])
 control_to_np = lambda c: np.array([c.steer, c.throttle, c.brake, c.hand_brake, c.reverse])
 transforms_rotation_to_np = lambda c: np.array([c.rotation.roll, c.rotation.pitch, c.rotation.yaw])
 transform_to_loc = lambda t: np.squeeze(np.asarray(t.matrix[:3, -1]))
+
 
 class LidarParams(attrdict.AttrDict):
     def __init__(self, meters_max=50, pixels_per_meter=2, hist_max_per_pixel=25, val_obstacle=1.):
@@ -33,13 +38,15 @@ class LidarParams(attrdict.AttrDict):
                          pixels_per_meter=pixels_per_meter,
                          hist_max_per_pixel=hist_max_per_pixel)
 
+
 class BEVFeatureParams:
     @staticmethod
     def create_v1():
         # Keep this constructor around.
         return BEVFeatureParams(build_occupancy_grid=True, build_overhead_lidar=True, build_overhead_semantic=False,
-                                occupancy_above=True, occupancy_below=True, expand_bev=False, second_occupancy_above=True)
-    
+                                occupancy_above=True, occupancy_below=True, expand_bev=False,
+                                second_occupancy_above=True)
+
     @classu.member_initialize
     def __init__(self, build_occupancy_grid=True, build_overhead_lidar=True, build_overhead_semantic=False,
                  occupancy_above=True, occupancy_below=True, expand_bev=False, second_occupancy_above=False):
@@ -49,6 +56,7 @@ class BEVFeatureParams:
         return "BEVFeatureParams(oc={}, ol={}, sem={}, above={}, below={}, expand={}, 2nd_above={})".format(
             self.build_occupancy_grid, self.build_overhead_lidar, self.build_overhead_semantic,
             self.occupancy_above, self.occupancy_below, self.expand_bev, self.second_occupancy_above)
+
 
 class PlayerObservations:
     @classu.member_initialize
@@ -75,16 +83,16 @@ class PlayerObservations:
 
         """
         self.t = t_index
-        
+
         # The sequence of player measurements.
         self.player_measurement_traj = [_.player_measurements for _ in measurements]
         # The transform at 'now'
-        self.tform_t  = transform.Transform(self.player_measurement_traj[t_index].transform)
+        self.tform_t = transform.Transform(self.player_measurement_traj[t_index].transform)
         # The inverse transform at 'now'
         self.inv_tform_t = self.tform_t.inverse()
         # The sequence of player forward speeds.
         self.player_forward_speeds = np.asarray([_.forward_speed for _ in self.player_measurement_traj])
-    
+
         # The sequence of player accelerations. These are in world coords.
         self.accels_world = np.asarray([vector3_to_np(_.acceleration)
                                         for _ in self.player_measurement_traj])
@@ -107,7 +115,7 @@ class PlayerObservations:
         if agent_id_ordering is None:
             # Get agents currently close to us.
             self.all_nearby_agent_ids = get_nearby_agent_ids(self.measurement_now, radius=radius)
-            self.nearby_agent_ids = self.all_nearby_agent_ids[:A-1]
+            self.nearby_agent_ids = self.all_nearby_agent_ids[:A - 1]
             # Extract just the aid from (dist, aid) pairs.
             self.nearby_agent_ids_flat = [_[1] for _ in self.nearby_agent_ids]
             # Store our ordering of the agents.
@@ -115,8 +123,8 @@ class PlayerObservations:
                 tuple(reversed(_)) for _ in enumerate(self.nearby_agent_ids_flat))
         else:
             # Expand radius so we make sure to get the desired agents.
-            self.all_nearby_agent_ids = get_nearby_agent_ids(self.measurement_now, radius=9999999*radius)
-            self.nearby_agent_ids = [None]*len(agent_id_ordering)
+            self.all_nearby_agent_ids = get_nearby_agent_ids(self.measurement_now, radius=9999999 * radius)
+            self.nearby_agent_ids = [None] * len(agent_id_ordering)
             for dist, aid in self.all_nearby_agent_ids:
                 if aid in agent_id_ordering:
                     # Put the agent id in the provided index.
@@ -127,21 +135,24 @@ class PlayerObservations:
 
         # Collate the transforms of nearby agents.
         self.npc_tforms_nearby = collections.OrderedDict()
-        self.npc_trajectories = []
+        self.npc_trajectories = [None] * len(self.nearby_agent_ids)
         for dist, nid in self.nearby_agent_ids:
             self.npc_tforms_nearby[nid] = self.npc_tforms_unfilt[nid]
-            self.npc_trajectories.append([transform_to_loc(_) for _ in self.npc_tforms_unfilt[nid]])
-        self.all_npc_trajectories = []                
+            index = self.agent_id_ordering[nid]
+            self.npc_trajectories[index] = ([transform_to_loc(_) for _ in self.npc_tforms_unfilt[nid]])
+
+        self.all_npc_trajectories = []
         for dist, nid in self.all_nearby_agent_ids:
             self.all_npc_trajectories.append([transform_to_loc(_) for _ in self.npc_tforms_unfilt[nid]])
 
         history_shapes = [np.asarray(_).shape for _ in self.all_npc_trajectories]
         different_history_shapes = len(set(history_shapes)) > 1
         if different_history_shapes:
-            log.error("Not all agents have the same history length! Pruning smallest agents until there's just one shape")
+            log.error(
+                "Not all agents have the same history length! Pruning smallest agents until there's just one shape")
             while len(set(history_shapes)) > 1:
                 history_shapes = [np.asarray(_).shape for _ in self.all_npc_trajectories]
-                smallest_agent_index = np.argmin(history_shapes,axis=0)[0]
+                smallest_agent_index = np.argmin(history_shapes, axis=0)[0]
                 self.all_npc_trajectories.pop(smallest_agent_index)
 
         # The other agent positions in world frame.
@@ -174,7 +185,11 @@ class PlayerObservations:
         uapw_pack = np.reshape(self.unfilt_agent_positions_world, (-1, 3))
 
         # Store all agent current positions in agent frame.
-        self.unfilt_agent_positions_local = np.reshape(self.inv_tform_t.transform_points(uapw_pack), uoshape)
+        #self.unfilt_agent_positions_local = np.reshape(self.inv_tform_t.transform_points(uapw_pack), uoshape)
+        #if self.n_missing == A - 1:
+        #    self.unfilt_agent_positions_local = np.reshape(uapw_pack, uoshape)
+        #else:
+        #    self.unfilt_agent_positions_local = np.reshape(self.inv_tform_t.transform_points(uapw_pack), uoshape)
 
         if A == 1:
             self.agent_positions_local = np.array([])
@@ -185,10 +200,10 @@ class PlayerObservations:
             self.agent_positions_now_world = self.agent_positions_world[:, self.t]
             self.all_positions_now_world = np.concatenate(
                 (self.player_position_now_world[None], self.agent_positions_now_world), axis=0)
-        assert(self.all_positions_now_world.shape == (A, 3))
+        assert (self.all_positions_now_world.shape == (A, 3))
 
         if self.n_missing > 0:
-            log.warning("Overwriting missing agent local positions with empty_val={}!".format(empty_val))
+            #log.warning("Overwriting missing agent local positions with empty_val={}!".format(empty_val))
             self.agent_positions_local[-self.n_missing:] = empty_val
 
         self.yaws_world = [self.tform_t.yaw]
@@ -196,21 +211,22 @@ class PlayerObservations:
         # Extract the yaws for the agents at t=now.
         for tforms in self.npc_tforms_nearby.values():
             self.yaws_world.append(tforms[self.t].yaw)
-        self.yaws_world.extend([0]*self.n_missing)
+        self.yaws_world.extend([0] * self.n_missing)
 
-        assert(self.agent_positions_world.shape[0] == A - 1)
-        assert(self.agent_positions_local.shape[0] == A - 1)
-        assert(len(self.yaws_world) == A)
-        assert(len(self.agent_indicators) == A)
+        assert (self.agent_positions_world.shape[0] == A - 1)
+        assert (self.agent_positions_local.shape[0] == A - 1)
+        assert (len(self.yaws_world) == A)
+        assert (len(self.agent_indicators) == A)
 
         if waypointer is not None:
             # Get the light state from the most recent measurement.
-            self.traffic_light_state, self.traffic_light_data = waypointer.get_upcoming_traffic_light(measurements[-1], sensor_data=None)
+            self.traffic_light_state, self.traffic_light_data = waypointer.get_upcoming_traffic_light(measurements[-1],
+                                                                                                      sensor_data=None)
         else:
             log.warning("Not recording traffic light state in observation!")
 
         self.player_destination_world = waypointer.goal_position
-        
+
         if self.player_destination_world is not None:
             self.player_destination_local = self.inv_tform_t.transform_points(self.player_destination_world[None])[0]
         else:
@@ -219,7 +235,7 @@ class PlayerObservations:
 
     def get_sfa(self, t):
         """Return (2d position, scalar forward_speed, 3d acceleration) at the specified index"""
-        return (self.player_positions_local[t,:2],  self.player_forward_speeds[t], self.accels_local[t])
+        return (self.player_positions_local[t, :2], self.player_forward_speeds[t], self.accels_local[t])
 
     def copy_with_new_empty_val(self, empty_val):
         return PlayerObservations(measurements=self.measurements,
@@ -235,7 +251,7 @@ class PlayerObservations:
                                   radius=self.radius,
                                   A=self.A,
                                   agent_id_ordering=agent_id_ordering)
-    
+
 
 class StreamingCARLALoader:
     @classu.member_initialize
@@ -257,12 +273,13 @@ class StreamingCARLALoader:
         self.measurements = []
         self.player_trajectory = []
         self.feed_dicts_and_transforms = {}
+        self.all_observations = {}
         # Default to v1.
         if self.bev_feature_params is None: self.bev_feature_params = BEVFeatureParams.create_v1()
         self.bev_and_lidar_kwargs = {'lidar_sensor': self.lidar_sensor,
                                      'lidar_params': self.lidar_params,
                                      'bev_feature_params': self.bev_feature_params}
-        
+
     @property
     def T_past(self):
         return self._T_past
@@ -283,9 +300,11 @@ class StreamingCARLALoader:
         :rtype: 
 
         """
-        
+
         max_prune_frame = frame - self.T - 1
-        for i in range(max_prune_frame): self.feed_dicts_and_transforms.pop(i, None)
+        for i in range(max_prune_frame):
+            self.feed_dicts_and_transforms.pop(i, None)
+            self.all_observations.pop(i, None)
 
     def populate_expert_feeds(self, observations, S_future_world_frame, frame):
         """Populate an earlier feed dict with expert data
@@ -298,17 +317,143 @@ class StreamingCARLALoader:
 
         """
         earlier_frame = frame - self.T
-        assert(earlier_frame > 0)
-        
+        assert (earlier_frame > 0)
+
         # Get feed dict and transform from an earlier frame
         fd, tform = self.feed_dicts_and_transforms[earlier_frame]
-        # These are the past positions with the most recent one occuring at the current frame. 
-        player_future_local = tform.transform_points(observations.player_positions_world)[1:self.T+1, :2][None, None]
+        earlier_observations = self.all_observations[earlier_frame]
+        # These are the past positions with the most recent one occuring at the current frame.
+
+        player_future_local = tform.transform_points(observations.player_positions_world)[1:self.T + 1, :2][None, None]
         # TODO create for other agents too... assumes A=1.
         # other_future_local = tform.transform_points(observations.agent_positions_world)
+
+        '''# sort past
+        desired_name = "S_past_world_frame:0"
+        desired_element = None
+        for tensor_key in fd.keys():
+            if tensor_key.name == desired_name:
+                desired_element = fd[tensor_key]
+                break
+
+        distances = np.linalg.norm(np.copy(desired_element[0])[:, self.T_past - 1], axis=1)
+        inds = distances.argsort()
+        sorted_past_local = np.array(desired_element[0])[inds]
+
+        for tensor_key in fd.keys():
+            if tensor_key.name == desired_name:
+                fd[tensor_key] = sorted_past_local[None]
+                break
+
+        desired_name = "yaws:0"
+        for tensor_key in fd.keys():
+            if tensor_key.name == desired_name:
+                fd[tensor_key] = np.array(fd[tensor_key][0])[inds][None]
+                break
+
+        # sort future
+        future_local = []
+        for other_agent_past in observations.agent_positions_world:
+            agent_past_local = tform.transform_points(other_agent_past)[:, :2]
+            future_local.append(agent_past_local)
+
+        distances = np.linalg.norm(np.copy(future_local)[:, 0], axis=1)
+        inds = distances.argsort()
+        sorted_past_local = np.array(future_local)[inds]
+
+        for future in sorted_past_local:
+            player_future_local = np.append(player_future_local, future[1:, :][None, None], axis=1)'''
+
+        npc_tforms_nearby = collections.OrderedDict()
+        npc_trajectories = [None] * len(earlier_observations.nearby_agent_ids)
+        for dist, nid in earlier_observations.nearby_agent_ids:
+            npc_tforms_nearby[nid] = earlier_observations.npc_tforms_unfilt[nid]
+            index = earlier_observations.agent_id_ordering[nid]
+            npc_trajectories[index] = ([transform_to_loc(_) for _ in observations.npc_tforms_unfilt[nid]])
+
+        agent_positions_world = np.asarray(npc_trajectories)
+
+        n_missing = max(earlier_observations.A - 1 - agent_positions_world.shape[0], 0)
+
+        if n_missing == 0:
+            pass
+        elif n_missing > 0:
+            player_measurement_traj = [_.player_measurements for _ in earlier_observations.measurements]
+            player_positions_world = np.asarray([vector3_to_np(_.transform.location)
+                                                      for _ in player_measurement_traj])
+            # (3,)
+            faraway = player_positions_world[-self.T] + 500
+            faraway_tile = np.tile(faraway[None, None], (n_missing, len(earlier_observations.measurements), 1))
+            if n_missing == 0:
+                pass
+            elif n_missing == earlier_observations.A - 1:
+                agent_positions_world = faraway_tile
+            else:
+                agent_positions_world = np.concatenate(
+                    (agent_positions_world, faraway_tile), axis=0)
+
+        for other_agent_past in agent_positions_world:
+            agent_past_local = tform.transform_points(other_agent_past)[1:self.T + 1, :2][None, None]
+            player_future_local = np.append(player_future_local, agent_past_local, axis=1)
+
         fd[S_future_world_frame] = player_future_local
+
+        dict_values = list(fd.values())
+        past = dict_values[0]
+        yaws = dict_values[1]
+        agent_presence = dict_values[2]
+        overhead_features = dict_values[4]
+        future = dict_values[6]
+
+        def plot_ndarray(image_array):
+            # Ensure the shape is (1, 100, 100, 4)
+            if image_array.shape != (1, 100, 100, 4):
+                raise ValueError("Expected shape (1, 100, 100, 4) for the input array.")
+
+            # Plot the image
+            plt.imshow(image_array[0, :, :, 0], cmap='gray')
+            plt.axis('off')  # Turn off axis labels and ticks
+
+        def plot_trajectories(array, yaw_array, marker='o', plot_yaws=False):
+            # Ensure the shape is (n, l, 2)
+            if len(array.shape) != 3 or array.shape[2] != 2:
+                raise ValueError("Expected shape (n, l, 2) for the input array.")
+
+            n = array.shape[0]  # Number of trajectories
+            trajectory_length = array.shape[1]
+
+            # Plot each trajectory
+            for i in range(n):
+                trajectory = array[i]
+                x = trajectory[:, 0] * 2 + 50
+                y = trajectory[:, 1] * 2 + 50
+
+                # Generate a unique color for each trajectory based on index
+                color = plt.cm.viridis(i / n)  # Change the colormap if desired
+
+                plt.plot(x, y, marker=marker, markerfacecolor='none', markersize=10, color=color, linestyle='', label=f"Trajectory {i}")
+
+            if plot_yaws:
+                for i in range(n):
+                    yaw = yaw_array[i]
+                    trajectory = array[i]
+                    x = trajectory[0, 0] * 2 + 50
+                    y = trajectory[0, 1] * 2 + 50
+
+                    plt.text(x, y, str(round(yaw)), color=plt.cm.viridis(i / n))
+
+            plt.xlabel('X-axis')
+            plt.ylabel('Y-axis')
+
+        '''if frame % 100 == 0:
+            plot_ndarray(overhead_features)
+            plot_trajectories(past[0], yaws[0], 'x', True)
+            plot_trajectories(future[0], yaws[0])
+
+            plt.show()'''
+
         return fd
-        
+
     def populate_phi_feeds(self,
                            phi,
                            sensor_data,
@@ -316,7 +461,7 @@ class StreamingCARLALoader:
                            observations,
                            frame,
                            with_bev=True,
-                           with_lights=True):
+                           with_lights=False):
         """Populates the feed_dict values of phi for the current frame.
 
         :param sensor_data: 
@@ -325,40 +470,61 @@ class StreamingCARLALoader:
         :rtype: 
 
         """
-        assert(measurement_buffer.maxlen > self.T)
+        assert (measurement_buffer.maxlen > self.T)
         feed_dict = tfutil.FeedDict()
         # Store these feeds for potential later expert population.
         self.feed_dicts_and_transforms[frame] = (feed_dict, observations.inv_tform_t)
+        self.all_observations[frame] = observations
         B, H, W, C = tensoru.shape(phi.overhead_features)
         _, A = tensoru.shape(phi.yaws)
-            
+
         # Extract robot pasts.
         pasts = observations.player_positions_local[-self.T_past:, :2][None]
-        
+
         # Extract other agent pasts.
         pasts_other = observations.agent_positions_local[:, -self.T_past:, :2]
 
         # Indicate all present
-        agent_presence = np.ones(shape=tensoru.shape(phi.agent_presence), dtype=np.float32)
+        #agent_presence = np.ones(shape=tensoru.shape(phi.agent_presence), dtype=np.float32)
+        agent_presence = np.zeros(shape=tensoru.shape(phi.agent_presence), dtype=np.float32)
+        agent_presence[:, :(min((len(observations.nearby_agent_ids_flat) + 1), A))] = [1] * min(
+            (len(observations.nearby_agent_ids_flat) + 1), A)
 
         # Combine ego and other pasts.
         pasts_joint = np.concatenate((pasts, pasts_other))[:A][None]
-        
+
+        #last_point_magnitudes1 = np.linalg.norm(np.copy(pasts_joint[0])[:, 0], axis=1)
+        #inds = last_point_magnitudes1.argsort()
+        #pasts_joint = pasts_joint[0][inds][None]
+
         # Tile pasts.
         pasts_batch = np.tile(pasts_joint, (B, 1, 1, 1))
 
         yaws = np.tile(np.asarray(observations.yaws_local[:A])[None], (B, 1))
+        #yaws = yaws[0][inds][None]
 
-        feed_dict[phi.S_past_world_frame] = pasts_batch                
+        feed_dict[phi.S_past_world_frame] = pasts_batch
         feed_dict[phi.yaws] = yaws
         feed_dict[phi.agent_presence] = agent_presence
         feed_dict[phi.is_training] = np.array(False)
 
         # Feed the BEV features.
         if with_bev:
-            bevs = build_BEV(frame_data=sensor_data, measurements=measurement_buffer[-1], **self.bev_and_lidar_kwargs)[None]
-            assert(bevs.ndim == 4)
-            
+            bevs = build_BEV(frame_data=sensor_data, measurements=measurement_buffer[-1], **self.bev_and_lidar_kwargs)[
+                None]
+            assert (bevs.ndim == 4)
+
+            '''image = bevs
+
+            # If you want to display the first three channels (assuming RGB format), discard the fourth channel
+            image_rgb = image[0, :, :, :]
+
+            # Display the image using Matplotlib
+            plt.imshow(image_rgb)
+            plt.axis('off')  # Turn off axis labels and ticks
+            plt.title('Image')
+            plt.show()'''
+
             if bevs.shape[1] > H:
                 # Center crop the bev's preserving the pixels/meter of input.
                 log.debug("Center-cropping...")
@@ -367,7 +533,7 @@ class StreamingCARLALoader:
 
             if self.with_sdt:
                 # TODO hardcoded and bad! Currently set to match the SDT params from the precog repo.
-                for b in range(B):                
+                for b in range(B):
                     serialized_dataset._create_sdt(
                         bevs=bevs,
                         sdt_filename=None,
@@ -383,7 +549,7 @@ class StreamingCARLALoader:
                         sdt_params={'clip_top': 1, 'clip_bottom': -3, 'normalize': True})
 
             # TODO make the model more efficient by using B=1.
-            bevs = np.tile(bevs, (B, 1, 1, 1))            
+            bevs = np.tile(bevs, (B, 1, 1, 1))
 
             # Add the bevs to the feed dict.
             feed_dict[phi.overhead_features] = bevs
@@ -397,15 +563,18 @@ class StreamingCARLALoader:
             log.warning("Not feeding traffic light state to model!")
         return feed_dict
 
+
 class NumpyEncoder(json.JSONEncoder):
     """
     The encoding object used to serialize np.ndarrays
     """
+
     def default(self, obj):
         if isinstance(obj, np.ndarray):
             return obj.tolist()
         return json.JSONEncoder.default(self, obj)
-        
+
+
 def dict_to_json(dict_datum, out_fn, b=0):
     """Used to serialize model feeds into json that can be used to train the model.
 
@@ -415,12 +584,24 @@ def dict_to_json(dict_datum, out_fn, b=0):
     :rtype: 
 
     """
-    assert(not os.path.isfile(out_fn))
+    assert (not os.path.isfile(out_fn))
+
     # Assume that the input dict has keys with .name attributes (e.g. tf.Tensors)
+
+    def my_filtering_function(pair):
+        key, value = pair
+        if key.name.split(':')[0] == "Const":
+            return False  # filter pair out of the dictionary
+        else:
+            return True  # keep pair in the filtered dictionary
+
+    dict_datum = dict(filter(my_filtering_function, dict_datum.items()))
+
     preproc_dict = {k.name.split(':')[0]: np.squeeze(v[b]) for k, v in dict_datum.items()}
     with open(out_fn, 'w') as f:
         json.dump(preproc_dict, f, cls=NumpyEncoder)
     return out_fn
+
 
 def build_BEV(frame_data,
               measurements,
@@ -438,15 +619,26 @@ def build_BEV(frame_data,
     :rtype: 
 
     """
-    
+
     # Build lidar features.
     if bev_feature_params.build_overhead_lidar:
-        # (W, H)
         overhead_lidar = splat_lidar(lidar_sensor,
                                      frame_data.Lidar32,
                                      measurements.player_measurements,
                                      lidar_params=lidar_params)
         overhead_lidar_features = overhead_lidar[..., None]
+
+        '''image = overhead_lidar_features
+
+        # If you want to display the first three channels (assuming RGB format), discard the fourth channel
+        image_rgb = image[:, :, 0]
+
+        # Display the image using Matplotlib
+        plt.imshow(image_rgb)
+        plt.axis('off')  # Turn off axis labels and ticks
+        plt.title('Image')
+        plt.show()'''
+
         log.debug("Overhead LIDAR features shape: {}".format(overhead_lidar_features.shape))
         if bev_feature_params.build_occupancy_grid:
             ogrid = get_occupancy_grid(
@@ -464,7 +656,7 @@ def build_BEV(frame_data,
 
     # Build semantic features.
     if bev_feature_params.build_overhead_semantic:
-        raise NotImplementedError        
+        raise NotImplementedError
     else:
         overhead_semantic_features = None
 
@@ -481,6 +673,7 @@ def build_BEV(frame_data,
     log.debug("Built BEV shape: {}".format(overhead_features.shape))
     return overhead_features
 
+
 def get_rectifying_player_transform(player_measurements):
     """ Build transform to correct for pitch or roll of car. """
     ptx = player_measurements.transform
@@ -492,23 +685,27 @@ def get_rectifying_player_transform(player_measurements):
     p_rectify.set(pT, pR)
     return p_rectify
 
+
 def get_rectified_player_transform(player_measurements):
     return (get_rectifying_player_transform(player_measurements) *
             transform.Transform(player_measurements.transform))
 
+
 def get_rectified_sensor_transform(lidar_sensor, player_measurements):
     p_rectify = get_rectifying_player_transform(player_measurements)
-    
+
     # Transform to car frame, then undo the pitch and roll of the car frame.
     lidar_transform = p_rectify * lidar_sensor.get_transform()
     return lidar_transform
 
+
 def get_rectified_depth_transform(lidar_sensor, player_measurements):
     p_rectify = get_rectifying_player_transform(player_measurements)
-    
+
     # Transform to car frame, then undo the pitch and roll of the car frame.
     lidar_transform = p_rectify * lidar_sensor.get_transform().inverse()
     return lidar_transform
+
 
 def rectify_rigid_rotation_of_sensor(image, player_measurements, K, K_inv):
     """TODO not sure if correct.
@@ -520,6 +717,7 @@ def rectify_rigid_rotation_of_sensor(image, player_measurements, K, K_inv):
 
     R = get_rectifying_player_transform(player_measurements).matrix[:3, :3]
     return skt.warp(image.data, K @ R @ K_inv)
+
 
 def flip_light_state(light_state):
     if light_state == "GREEN":
@@ -533,6 +731,7 @@ def flip_light_state(light_state):
     else:
         raise ValueError("Unknown light state: '{}'".format(light_state))
 
+
 def splat_lidar(lidar_sensor, lidar_measurement, player_measurements, lidar_params):
     """Convert a point cloud to a one-channel image centered around the car
     by projecting points to a ground plane histogram and normalizing it.
@@ -544,7 +743,7 @@ def splat_lidar(lidar_sensor, lidar_measurement, player_measurements, lidar_para
     :returns: 2d ndarray, size goverened by lidar parameters
     :rtype: ndarray
     """
-    
+
     lidar_point_cloud = lidar_measurement.point_cloud
 
     # Get world -> rectified lidar transform
@@ -557,17 +756,67 @@ def splat_lidar(lidar_sensor, lidar_measurement, player_measurements, lidar_para
                         [0, -1, 0],
                         [0, 0, -1]], dtype=np.float32)
     lidar_points_at_car = (permute @ lidar_points_at_car.T).T
+
+    '''
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Extract x, y, z coordinates from the point cloud
+    selection = lidar_points_at_car[::5]
+    x_coords = selection[:, 0]
+    y_coords = selection[:, 1]
+    z_coords = selection[:, 2]
+
+    # Plotting the point cloud
+    ax.scatter(x_coords, y_coords, z_coords, c='b', marker='o')
+
+    # Set labels and title
+    ax.set_xlabel('X-axis')
+    ax.set_ylabel('Y-axis')
+    ax.set_zlabel('Z-axis')
+    ax.set_title('Point Cloud Visualization')
+
+    # Show plot
+    plt.show()
+    '''
+
+    #visualize_points(lidar_points_at_car)
+
     return splat_points(lidar_points_at_car, lidar_params)
+
+
+def visualize_points(point_cloud: np.ndarray):
+    n = len(point_cloud)
+    random_indices = np.random.choice(n, 2500, replace=False)
+    selected_points = point_cloud[random_indices]
+
+    # Separate the data into coordinates and colors
+    x, y, z, colors = selected_points[:, 0], selected_points[:, 1], selected_points[:, 2], selected_points[:, 2]
+
+    # Create a 3D plot
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Plot the points with colors
+    ax.scatter(x, y, z, c=colors, cmap=plt.get_cmap('viridis'))
+
+    # Set labels for the axes
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+
+    plt.show()
+
 
 def splat_points(points, splat_params, nd=2):
     meters_max = splat_params['meters_max']
     pixels_per_meter = splat_params['pixels_per_meter']
     hist_max_per_pixel = splat_params['hist_max_per_pixel']
-    
+
     # Allocate 2d histogram bins. Todo tmp?
     ymeters_max = meters_max
-    xbins = np.linspace(-meters_max, meters_max+1, meters_max * 2 * pixels_per_meter + 1)
-    ybins = np.linspace(-meters_max, ymeters_max+1, ymeters_max * 2 * pixels_per_meter + 1)
+    xbins = np.linspace(-meters_max, meters_max + 1, meters_max * 2 * pixels_per_meter + 1)
+    ybins = np.linspace(-meters_max, ymeters_max + 1, ymeters_max * 2 * pixels_per_meter + 1)
     hist = np.histogramdd(points[..., :nd], bins=(xbins, ybins))[0]
     # Compute histogram of x and y coordinates of points
     # hist = np.histogram2d(x=points[:,0], y=points[:,1], bins=(bins, ybins))[0]
@@ -580,6 +829,7 @@ def splat_points(points, splat_params, nd=2):
 
     # Return splat in X x Y orientation, with X parallel to car axis, Y perp, both parallel to ground
     return overhead_splat
+
 
 def get_occupancy_grid(lidar_sensor, lidar_measurement, player_measurements,
                        lidar_params, above=True, below=False, second_above=False):
@@ -594,7 +844,7 @@ def get_occupancy_grid(lidar_sensor, lidar_measurement, player_measurements,
 
     """
 
-    assert(sum([above, below]) >= 1)
+    assert (sum([above, below]) >= 1)
     lidar_point_cloud = lidar_measurement.point_cloud
 
     # Get world -> rectified lidar transform
@@ -634,6 +884,7 @@ def get_occupancy_grid(lidar_sensor, lidar_measurement, player_measurements,
         feats += (get_occupancy_from_masked_lidar(second_above_mask),)
     return np.stack(feats, axis=-1)
 
+
 def extract_nonplayer_transforms_list(measurement_list, include_people=False):
     """Extract a dictionary of lists for each agent of their transforms.
 
@@ -649,6 +900,7 @@ def extract_nonplayer_transforms_list(measurement_list, include_people=False):
             transforms[k].append(v)
     return transforms
 
+
 def extract_nonplayer_transforms(measurement, include_people=False):
     """Extract the other vehicle (and maybe people) Transforms
 
@@ -659,7 +911,7 @@ def extract_nonplayer_transforms(measurement, include_people=False):
 
     """
     transforms = {}
-    
+
     for npmes in measurement.non_player_agents:
         aid = npmes.id
         agentkey = '{}'.format(aid)
@@ -668,6 +920,7 @@ def extract_nonplayer_transforms(measurement, include_people=False):
             transforms[agentkey] = a_transforms
     return transforms
 
+
 def extract_nonplayer_transform(npmes, include_people=False):
     if npmes.HasField('vehicle'):
         return transform.Transform(npmes.vehicle.transform)
@@ -675,6 +928,7 @@ def extract_nonplayer_transform(npmes, include_people=False):
         return transform.Transform(npmes.pedestrian.transform)
     else:
         return None
+
 
 def get_nearby_agent_ids(measurement, radius):
     """Get sorted agent distances and ids within a radius
@@ -689,7 +943,7 @@ def get_nearby_agent_ids(measurement, radius):
     nearby = []
     transforms = extract_nonplayer_transforms(measurement)
 
-    #H ACK
+    # H ACK
     # log.error("Strange criteria for nearby agents!")
     # acceptor = lambda x,y: y[0] < 115. and y[1] > 52
     for aid, tform in transforms.items():

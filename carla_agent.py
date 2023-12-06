@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+import warnings
+warnings.filterwarnings("ignore", message=r"Passing", category=FutureWarning)
+
 import atexit
 import dill
 import getpass
@@ -46,7 +49,7 @@ log = logging.getLogger(os.path.basename(__file__))
 # Nicer numpy printing
 np.set_printoptions(precision=3, suppress=True, threshold=10)
 
-@hydra.main(config_path='config/dim_config.yaml')
+@hydra.main(config_path='config/dim_config_A10.yaml')
 def main(cfg):
     print(' '.join(sys.argv))
     # Update the configs with the parsed cfg, in case the configs are used elsewhere.
@@ -208,7 +211,8 @@ def run_carla_client(cfg, server_log_fn):
             agent_presence=agent_presence,
             light_strings=light_strings,
             feature_pixels_per_meter=lidar_params.pixels_per_meter,
-            yaws_in_degrees=True)
+            yaws_in_degrees=True,
+            is_training=False)
         midlow_controller = None
     else: raise ValueError(mainconf.pilot)
 
@@ -244,7 +248,7 @@ def run_carla_client(cfg, server_log_fn):
         # Build the object that will process data and create feed_dicts for R2P2 forecasting.
         streaming_loader = preproc.StreamingCARLALoader(settings=settings_carla, T_past=T_past, T=T,
                                                         # TODO assumes model config
-                                                        with_sdt=model_config['dataset']['params']['sdt_bev'])
+                                                        with_sdt=False)
         
         # Manage the things we plot.
         plottable_manager = cplot.PlottableManager(plotconf)
@@ -297,10 +301,10 @@ def run_carla_client(cfg, server_log_fn):
 
 def postprocess_cfg(cfg):
     cfgexp = cfg.experiment
-    if cfgexp.n_vehicles > 0:
-        if cfgexp.scene == 'Town02': assert(cfgexp.n_vehicles == 20)
-        elif cfgexp.scene == 'Town01': assert(cfgexp.n_vehicles == 50)
-        else: pass
+    #if cfgexp.n_vehicles > 0:
+    #    if cfgexp.scene == 'Town02': assert(cfgexp.n_vehicles == 20)
+    #    elif cfgexp.scene == 'Town01': assert(cfgexp.n_vehicles == 50)
+    #    else: pass
             
     if len(cfgexp.specific_episodes) > 0:
         # Ensure we'll actually get to run

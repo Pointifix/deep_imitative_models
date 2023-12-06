@@ -121,7 +121,7 @@ def run_episode(client,
     # TODO incorporate pasts of other agents!
     # ---------------------------------------    
     log.warning("Defaulting to a hardcoded A past of 1")    
-    A_past = 5
+    A_past = dataconf.shapes.A
 
     # Ensure all previous episodes were properly concluded.
     for em in metrics.all_episode_metrics: assert(em.concluded)
@@ -182,7 +182,7 @@ def run_episode(client,
         # Instantiate the object that represents all observations at the current time.
         # -----------------------
         current_obs = preproc.PlayerObservations(
-            measurement_buffer, t_index=-1, radius=200, A=A_past, waypointer=waypointer, frame=frame)
+            measurement_buffer, t_index=-1, radius=25, A=A_past, waypointer=waypointer, frame=frame)
         # Store some tracking data in the observation.
         current_obs.is_turning = turn_tracker.is_turning()
         current_obs.is_stuck = stuck
@@ -272,6 +272,8 @@ def run_episode(client,
                 frame=frame)
             if have_control and dataconf.save_data:
                 fd_previous = streaming_loader.populate_expert_feeds(current_obs, future, frame)
+
+                #if np.all(list(fd_previous.values())[2] == 1): # TODO REMOVE AGAIN, only here to ensure all agents exist in this frame to remove empty val agents
                 if frame % dataconf.save_period_frames == 0:
                     fn = "{}/feed_{:08d}.json".format(dim_feeds_dir, frame)
                     log.debug("Saving feed to '{}'".format(fn))
